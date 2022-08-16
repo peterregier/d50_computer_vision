@@ -1,0 +1,303 @@
+﻿OrganizationIdentifier,OrganizationFormalName,ActivityIdentifier,ActivityStartDate,ActivityStartTime/Time,ActivityStartTime/TimeZoneCode,MonitoringLocationIdentifier,ResultIdentifier,DataLoggerLine,ResultDetectionConditionText,MethodSpecificationName,CharacteristicName,ResultSampleFractionText,ResultMeasureValue,ResultMeasure/MeasureUnitCode,MeasureQualifierCode,ResultStatusIdentifier,StatisticalBaseCode,ResultValueTypeName,ResultParticleSizeBasisText,USGSPCode
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400959,7/15/94,10:00:00,PDT,USGS-12464606,NWIS-70282377,,,,Sediment,Bed Sediment,24,%,,Historical,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400959,7/15/94,10:00:00,PDT,USGS-12464606,NWIS-70282378,,,,Sediment,Bed Sediment,66,%,,Historical,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400959,7/15/94,10:00:00,PDT,USGS-12464606,NWIS-70282379,,,,Sediment,Bed Sediment,93,%,,Historical,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400959,7/15/94,10:00:00,PDT,USGS-12464606,NWIS-70282380,,,,Sediment,Bed Sediment,100,%,,Historical,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400959,7/15/94,10:00:00,PDT,USGS-12464606,NWIS-70282381,,,,Sediment,Bed Sediment,100,%,,Historical,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400959,7/15/94,10:00:00,PDT,USGS-12464606,NWIS-70282382,,,,Sediment,Bed Sediment,100,%,,Historical,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400964,7/13/94,11:00:00,PDT,USGS-12471090,NWIS-70282962,,,,Sediment,Bed Sediment,2,%,,Historical,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400964,7/13/94,11:00:00,PDT,USGS-12471090,NWIS-70282963,,,,Sediment,Bed Sediment,17,%,,Historical,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400964,7/13/94,11:00:00,PDT,USGS-12471090,NWIS-70282964,,,,Sediment,Bed Sediment,66,%,,Historical,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400964,7/13/94,11:00:00,PDT,USGS-12471090,NWIS-70282965,,,,Sediment,Bed Sediment,95,%,,Historical,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400964,7/13/94,11:00:00,PDT,USGS-12471090,NWIS-70282966,,,,Sediment,Bed Sediment,100,%,,Historical,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400964,7/13/94,11:00:00,PDT,USGS-12471090,NWIS-70282967,,,,Sediment,Bed Sediment,100,%,,Historical,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400969,7/13/94,15:30:00,PDT,USGS-12472000,NWIS-70283320,,,,Sediment,Bed Sediment,4,%,,Historical,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400969,7/13/94,15:30:00,PDT,USGS-12472000,NWIS-70283321,,,,Sediment,Bed Sediment,24,%,,Historical,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400969,7/13/94,15:30:00,PDT,USGS-12472000,NWIS-70283322,,,,Sediment,Bed Sediment,74,%,,Historical,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400969,7/13/94,15:30:00,PDT,USGS-12472000,NWIS-70283323,,,,Sediment,Bed Sediment,96,%,,Historical,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400969,7/13/94,15:30:00,PDT,USGS-12472000,NWIS-70283324,,,,Sediment,Bed Sediment,99,%,,Historical,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99400969,7/13/94,15:30:00,PDT,USGS-12472000,NWIS-70283325,,,,Sediment,Bed Sediment,100,%,,Historical,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99300444,7/27/93,13:15:00,PDT,USGS-12500450,NWIS-70192164,,,,Sediment,Bed Sediment,20,%,,Accepted,,Actual,< 0.0625 mm,80158
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201313,8/29/92,15:00:00,PDT,USGS-12463500,NWIS-70163760,,,,Sediment,Bed Sediment,99,%,,Historical,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201313,8/29/92,15:00:00,PDT,USGS-12463500,NWIS-70163755,,,,Sediment,Bed Sediment,41,%,,Historical,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201313,8/29/92,15:00:00,PDT,USGS-12463500,NWIS-70163756,,,,Sediment,Bed Sediment,56,%,,Historical,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201313,8/29/92,15:00:00,PDT,USGS-12463500,NWIS-70163757,,,,Sediment,Bed Sediment,67,%,,Historical,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201313,8/29/92,15:00:00,PDT,USGS-12463500,NWIS-70163758,,,,Sediment,Bed Sediment,82,%,,Historical,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201313,8/29/92,15:00:00,PDT,USGS-12463500,NWIS-70163759,,,,Sediment,Bed Sediment,94,%,,Historical,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201327,9/3/92,10:00:00,PDT,USGS-12472600,NWIS-70166058,,,,Sediment,Bed Sediment,27,%,,Historical,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201327,9/3/92,10:00:00,PDT,USGS-12472600,NWIS-70166059,,,,Sediment,Bed Sediment,62,%,,Historical,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201327,9/3/92,10:00:00,PDT,USGS-12472600,NWIS-70166060,,,,Sediment,Bed Sediment,89,%,,Historical,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201327,9/3/92,10:00:00,PDT,USGS-12472600,NWIS-70166061,,,,Sediment,Bed Sediment,96,%,,Historical,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201327,9/3/92,10:00:00,PDT,USGS-12472600,NWIS-70166062,,,,Sediment,Bed Sediment,99,%,,Historical,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201327,9/3/92,10:00:00,PDT,USGS-12472600,NWIS-70166063,,,,Sediment,Bed Sediment,100,%,,Historical,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201324,8/28/92,14:00:00,PDT,USGS-471313119422400,NWIS-70165575,,,,Sediment,Bed Sediment,76,%,,Historical,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201324,8/28/92,14:00:00,PDT,USGS-471313119422400,NWIS-70165576,,,,Sediment,Bed Sediment,85,%,,Historical,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201324,8/28/92,14:00:00,PDT,USGS-471313119422400,NWIS-70165577,,,,Sediment,Bed Sediment,91,%,,Historical,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201324,8/28/92,14:00:00,PDT,USGS-471313119422400,NWIS-70165578,,,,Sediment,Bed Sediment,96,%,,Historical,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201324,8/28/92,14:00:00,PDT,USGS-471313119422400,NWIS-70165579,,,,Sediment,Bed Sediment,98,%,,Historical,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201324,8/28/92,14:00:00,PDT,USGS-471313119422400,NWIS-70165580,,,,Sediment,Bed Sediment,100,%,,Historical,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201317,9/2/92,10:00:00,PDT,USGS-12472950,NWIS-70164414,,,,Sediment,Bed Sediment,100,%,,Historical,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201317,9/2/92,10:00:00,PDT,USGS-12472950,NWIS-70164409,,,,Sediment,Bed Sediment,12,%,,Historical,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201317,9/2/92,10:00:00,PDT,USGS-12472950,NWIS-70164410,,,,Sediment,Bed Sediment,40,%,,Historical,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201317,9/2/92,10:00:00,PDT,USGS-12472950,NWIS-70164411,,,,Sediment,Bed Sediment,86,%,,Historical,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201317,9/2/92,10:00:00,PDT,USGS-12472950,NWIS-70164412,,,,Sediment,Bed Sediment,98,%,,Historical,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99201317,9/2/92,10:00:00,PDT,USGS-12472950,NWIS-70164413,,,,Sediment,Bed Sediment,100,%,,Historical,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99500534,9/25/95,16:30:00,PDT,USGS-12103380,NWIS-70327024,,,,Sediment,Bed Sediment,100,%,,Preliminary,,Actual,< 2 mm,80163
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.99500534,9/25/95,16:30:00,PDT,USGS-12103380,NWIS-70327025,,,,Sediment,Bed Sediment,4,%,,Preliminary,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901208,5/1/89,14:30:00,PDT,USGS-12500437,NWIS-70063845,,,,Sediment,Bed Sediment,25,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901208,5/1/89,14:30:00,PDT,USGS-12500437,NWIS-70063846,,,,Sediment,Bed Sediment,31,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901208,5/1/89,14:30:00,PDT,USGS-12500437,NWIS-70063847,,,,Sediment,Bed Sediment,56,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901208,5/1/89,14:30:00,PDT,USGS-12500437,NWIS-70063848,,,,Sediment,Bed Sediment,94,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901208,5/1/89,14:30:00,PDT,USGS-12500437,NWIS-70063849,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901208,5/1/89,14:30:00,PDT,USGS-12500437,NWIS-70063850,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901211,5/4/89,11:00:00,PDT,USGS-12484500,NWIS-70064088,,,,Sediment,Bed Sediment,64,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901211,5/4/89,11:00:00,PDT,USGS-12484500,NWIS-70064089,,,,Sediment,Bed Sediment,86,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901211,5/4/89,11:00:00,PDT,USGS-12484500,NWIS-70064090,,,,Sediment,Bed Sediment,99,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901211,5/4/89,11:00:00,PDT,USGS-12484500,NWIS-70064091,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901211,5/4/89,11:00:00,PDT,USGS-12484500,NWIS-70064092,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901211,5/4/89,11:00:00,PDT,USGS-12484500,NWIS-70064093,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901209,5/2/89,12:30:00,PDT,USGS-12479720,NWIS-70063929,,,,Sediment,Bed Sediment,74,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901209,5/2/89,12:30:00,PDT,USGS-12479720,NWIS-70063930,,,,Sediment,Bed Sediment,95,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901209,5/2/89,12:30:00,PDT,USGS-12479720,NWIS-70063926,,,,Sediment,Bed Sediment,13,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901209,5/2/89,12:30:00,PDT,USGS-12479720,NWIS-70063927,,,,Sediment,Bed Sediment,21,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901209,5/2/89,12:30:00,PDT,USGS-12479720,NWIS-70063928,,,,Sediment,Bed Sediment,45,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901209,5/2/89,12:30:00,PDT,USGS-12479720,NWIS-70063931,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901210,5/3/89,9:45:00,PDT,USGS-12484550,NWIS-70064007,,,,Sediment,Bed Sediment,21,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901210,5/3/89,9:45:00,PDT,USGS-12484550,NWIS-70064008,,,,Sediment,Bed Sediment,32,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901210,5/3/89,9:45:00,PDT,USGS-12484550,NWIS-70064009,,,,Sediment,Bed Sediment,61,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901210,5/3/89,9:45:00,PDT,USGS-12484550,NWIS-70064010,,,,Sediment,Bed Sediment,85,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901210,5/3/89,9:45:00,PDT,USGS-12484550,NWIS-70064011,,,,Sediment,Bed Sediment,95,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98901210,5/3/89,9:45:00,PDT,USGS-12484550,NWIS-70064012,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 2 mm,80169
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98400467,3/6/84,9:45:00,PST,USGS-12510500,NWIS-69889834,,,,Sediment,Bed Sediment,7,%,,Historical,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98400460,3/6/84,15:00:00,PST,USGS-12500450,NWIS-69889481,,,,Sediment,Bed Sediment,7,%,,Historical,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.01600020,10/26/15,10:00:00,PDT,USGS-12505450,NWIS-102246493,,,,Sediment,Bed Sediment,51,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.01600020,10/26/15,10:00:00,PDT,USGS-12505450,NWIS-102246494,,,,Sediment,Bed Sediment,87,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.01600020,10/26/15,10:00:00,PDT,USGS-12505450,NWIS-102246495,,,,Sediment,Bed Sediment,98,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.01600020,10/26/15,10:00:00,PDT,USGS-12505450,NWIS-102246496,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.5 mm,80167
+,,,,,,,,,,,,,,,,,,,,
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00200595,7/31/02,11:30:00,PDT,USGS-12508620,NWIS-68588047,,,,Sediment,Bed Sediment,8,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00200595,7/31/02,11:30:00,PDT,USGS-12508620,NWIS-68588048,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00200594,8/1/02,10:30:00,PDT,USGS-12500900,NWIS-68588039,,,,Sediment,Bed Sediment,29,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00200594,8/1/02,10:30:00,PDT,USGS-12500900,NWIS-68588040,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00200650,6/24/02,16:40:00,PDT,USGS-470012119410300,NWIS-68588079,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00200650,6/24/02,16:40:00,PDT,USGS-470012119410300,NWIS-68588078,,,,Sediment,Bed Sediment,0,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00200596,7/30/02,16:10:00,PDT,USGS-12484550,NWIS-68588054,,,,Sediment,Bed Sediment,6,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00200596,7/30/02,16:10:00,PDT,USGS-12484550,NWIS-68588055,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00200599,6/26/02,12:20:00,PDT,USGS-12510500,NWIS-68588070,,,,Sediment,Bed Sediment,19,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00200599,6/26/02,12:20:00,PDT,USGS-12510500,NWIS-68588071,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897532,,,,Sediment,Bedload,84,%,,Accepted,,Actual,< 16 mm,80234
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897533,,,,Sediment,Bedload,94,%,,Accepted,,Actual,< 32 mm,80235
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897523,,,,Sediment,Bedload,81,tons/day,,Accepted,,Actual,,80225
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897524,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.0625 mm,80226
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897525,,,,Sediment,Bedload,1,%,,Accepted,,Actual,< 0.125 mm,80227
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897526,,,,Sediment,Bedload,2,%,,Accepted,,Actual,< 0.25 mm,80228
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897527,,,,Sediment,Bedload,17,%,,Accepted,,Actual,< 0.5 mm,80229
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897528,,,,Sediment,Bedload,66,%,,Accepted,,Actual,< 1 mm,80230
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897529,,,,Sediment,Bedload,74,%,,Accepted,,Actual,< 2 mm,80231
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897530,,,,Sediment,Bedload,77,%,,Accepted,,Actual,< 4 mm,80232
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897531,,,,Sediment,Bedload,80,%,,Accepted,,Actual,< 8 mm,80233
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897534,,,,Sediment,Bedload,100,%,,Accepted,,Actual,< 64 mm,80236
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800345,5/18/08,10:00:00,PDT,USGS-12487010,NWIS-79897535,,,,Sediment,Bedload,100,%,,Accepted,,Actual,< 128 mm,80238
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897473,,,,Sediment,Bedload,772,tons/day,,Accepted,,Actual,,80225
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897474,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.0625 mm,80226
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897475,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.125 mm,80227
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897476,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.25 mm,80228
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897477,,,,Sediment,Bedload,5,%,,Accepted,,Actual,< 0.5 mm,80229
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897478,,,,Sediment,Bedload,36,%,,Accepted,,Actual,< 1 mm,80230
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897479,,,,Sediment,Bedload,46,%,,Accepted,,Actual,< 2 mm,80231
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897480,,,,Sediment,Bedload,52,%,,Accepted,,Actual,< 4 mm,80232
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897481,,,,Sediment,Bedload,59,%,,Accepted,,Actual,< 8 mm,80233
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897482,,,,Sediment,Bedload,65,%,,Accepted,,Actual,< 16 mm,80234
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897483,,,,Sediment,Bedload,72,%,,Accepted,,Actual,< 32 mm,80235
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897484,,,,Sediment,Bedload,87,%,,Accepted,,Actual,< 64 mm,80236
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800341,5/20/08,13:25:00,PDT,USGS-12499010,NWIS-79897485,,,,Sediment,Bedload,100,%,,Accepted,,Actual,< 128 mm,80238
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897548,,,,Sediment,Bedload,162,tons/day,,Accepted,,Actual,,80225
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897549,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.0625 mm,80226
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897550,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.125 mm,80227
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897551,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.25 mm,80228
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897552,,,,Sediment,Bedload,11,%,,Accepted,,Actual,< 0.5 mm,80229
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897553,,,,Sediment,Bedload,53,%,,Accepted,,Actual,< 1 mm,80230
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897554,,,,Sediment,Bedload,64,%,,Accepted,,Actual,< 2 mm,80231
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897555,,,,Sediment,Bedload,67,%,,Accepted,,Actual,< 4 mm,80232
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897556,,,,Sediment,Bedload,71,%,,Accepted,,Actual,< 8 mm,80233
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897557,,,,Sediment,Bedload,78,%,,Accepted,,Actual,< 16 mm,80234
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897558,,,,Sediment,Bedload,91,%,,Accepted,,Actual,< 32 mm,80235
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897559,,,,Sediment,Bedload,100,%,,Accepted,,Actual,< 64 mm,80236
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800347,5/20/08,9:30:00,PDT,USGS-12487010,NWIS-79897560,,,,Sediment,Bedload,100,%,,Accepted,,Actual,< 128 mm,80238
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897499,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.0625 mm,80226
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897498,,,,Sediment,Bedload,72,tons/day,,Accepted,,Actual,,80225
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897500,,,,Sediment,Bedload,1,%,,Accepted,,Actual,< 0.125 mm,80227
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897501,,,,Sediment,Bedload,2,%,,Accepted,,Actual,< 0.25 mm,80228
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897502,,,,Sediment,Bedload,18,%,,Accepted,,Actual,< 0.5 mm,80229
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897503,,,,Sediment,Bedload,67,%,,Accepted,,Actual,< 1 mm,80230
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897504,,,,Sediment,Bedload,75,%,,Accepted,,Actual,< 2 mm,80231
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897505,,,,Sediment,Bedload,79,%,,Accepted,,Actual,< 4 mm,80232
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897506,,,,Sediment,Bedload,82,%,,Accepted,,Actual,< 8 mm,80233
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897507,,,,Sediment,Bedload,87,%,,Accepted,,Actual,< 16 mm,80234
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897508,,,,Sediment,Bedload,94,%,,Accepted,,Actual,< 32 mm,80235
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897509,,,,Sediment,Bedload,100,%,,Accepted,,Actual,< 64 mm,80236
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800343,5/17/08,17:30:00,PDT,USGS-12487010,NWIS-79897510,,,,Sediment,Bedload,100,%,,Accepted,,Actual,< 128 mm,80238
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897468,,,,Sediment,Bedload,59,%,,Accepted,,Actual,< 32 mm,80235
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897458,,,,Sediment,Bedload,1430,tons/day,,Accepted,,Actual,,80225
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897459,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.0625 mm,80226
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897460,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.125 mm,80227
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897461,,,,Sediment,Bedload,1,%,,Accepted,,Actual,< 0.25 mm,80228
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897462,,,,Sediment,Bedload,8,%,,Accepted,,Actual,< 0.5 mm,80229
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897463,,,,Sediment,Bedload,34,%,,Accepted,,Actual,< 1 mm,80230
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897464,,,,Sediment,Bedload,40,%,,Accepted,,Actual,< 2 mm,80231
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897465,,,,Sediment,Bedload,43,%,,Accepted,,Actual,< 4 mm,80232
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897466,,,,Sediment,Bedload,47,%,,Accepted,,Actual,< 8 mm,80233
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897467,,,,Sediment,Bedload,50,%,,Accepted,,Actual,< 16 mm,80234
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897469,,,,Sediment,Bedload,82,%,,Accepted,,Actual,< 64 mm,80236
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800340,5/18/08,13:15:00,PDT,USGS-12499010,NWIS-79897470,,,,Sediment,Bedload,100,%,,Accepted,,Actual,< 128 mm,80238
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897435,,,,Sediment,Bedload,100,%,,Accepted,,Actual,< 128 mm,80238
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897423,,,,Sediment,Bedload,1310,tons/day,,Accepted,,Actual,,80225
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897424,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.0625 mm,80226
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897425,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.125 mm,80227
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897426,,,,Sediment,Bedload,0,%,,Accepted,,Actual,< 0.25 mm,80228
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897427,,,,Sediment,Bedload,7,%,,Accepted,,Actual,< 0.5 mm,80229
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897428,,,,Sediment,Bedload,32,%,,Accepted,,Actual,< 1 mm,80230
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897429,,,,Sediment,Bedload,40,%,,Accepted,,Actual,< 2 mm,80231
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897430,,,,Sediment,Bedload,45,%,,Accepted,,Actual,< 4 mm,80232
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897431,,,,Sediment,Bedload,48,%,,Accepted,,Actual,< 8 mm,80233
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897432,,,,Sediment,Bedload,52,%,,Accepted,,Actual,< 16 mm,80234
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897433,,,,Sediment,Bedload,67,%,,Accepted,,Actual,< 32 mm,80235
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.00800337,5/17/08,13:05:00,PDT,USGS-12499010,NWIS-79897434,,,,Sediment,Bedload,85,%,,Accepted,,Actual,< 64 mm,80236
+,,,,,,,,,,,,,,,,,,,,
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802056,9/1/88,8:00:00,PDT,USGS-12503640,NWIS-70029276,,,,Sediment,Bed Sediment,8,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802056,9/1/88,8:00:00,PDT,USGS-12503640,NWIS-70029277,,,,Sediment,Bed Sediment,70,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802056,9/1/88,8:00:00,PDT,USGS-12503640,NWIS-70029278,,,,Sediment,Bed Sediment,83,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802056,9/1/88,8:00:00,PDT,USGS-12503640,NWIS-70029279,,,,Sediment,Bed Sediment,94,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802056,9/1/88,8:00:00,PDT,USGS-12503640,NWIS-70029280,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802056,9/1/88,8:00:00,PDT,USGS-12503640,NWIS-70029281,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802056,9/1/88,8:00:00,PDT,USGS-12503640,NWIS-70029282,,,,Sediment,Bed Sediment,23,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802056,9/1/88,8:00:00,PDT,USGS-12503640,NWIS-70029283,,,,Sediment,Bed Sediment,45,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802056,9/1/88,8:00:00,PDT,USGS-12503640,NWIS-70029284,,,,Sediment,Bed Sediment,12,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802056,9/1/88,8:00:00,PDT,USGS-12503640,NWIS-70029285,,,,Sediment,Bed Sediment,7,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802063,9/1/88,11:00:00,PDT,USGS-461652119522000,NWIS-70029447,,,,Sediment,Bed Sediment,3,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802063,9/1/88,11:00:00,PDT,USGS-461652119522000,NWIS-70029448,,,,Sediment,Bed Sediment,28,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802063,9/1/88,11:00:00,PDT,USGS-461652119522000,NWIS-70029449,,,,Sediment,Bed Sediment,77,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802063,9/1/88,11:00:00,PDT,USGS-461652119522000,NWIS-70029450,,,,Sediment,Bed Sediment,99,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802063,9/1/88,11:00:00,PDT,USGS-461652119522000,NWIS-70029451,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802063,9/1/88,11:00:00,PDT,USGS-461652119522000,NWIS-70029452,,,,Sediment,Bed Sediment,4,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802063,9/1/88,11:00:00,PDT,USGS-461652119522000,NWIS-70029453,,,,Sediment,Bed Sediment,11,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802063,9/1/88,11:00:00,PDT,USGS-461652119522000,NWIS-70029454,,,,Sediment,Bed Sediment,3,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802063,9/1/88,11:00:00,PDT,USGS-461652119522000,NWIS-70029455,,,,Sediment,Bed Sediment,3,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014065,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014059,,,,Sediment,Bed Sediment,10,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014060,,,,Sediment,Bed Sediment,36,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014061,,,,Sediment,Bed Sediment,44,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014062,,,,Sediment,Bed Sediment,49,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014063,,,,Sediment,Bed Sediment,62,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014064,,,,Sediment,Bed Sediment,94,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014066,,,,Sediment,Bed Sediment,18,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014067,,,,Sediment,Bed Sediment,27,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014068,,,,Sediment,Bed Sediment,11,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801069,9/1/88,9:30:00,PDT,USGS-12507508,NWIS-70014069,,,,Sediment,Bed Sediment,9,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801066,8/30/88,17:30:00,PDT,USGS-12500430,NWIS-70013806,,,,Sediment,Bed Sediment,11,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801066,8/30/88,17:30:00,PDT,USGS-12500430,NWIS-70013807,,,,Sediment,Bed Sediment,87,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801066,8/30/88,17:30:00,PDT,USGS-12500430,NWIS-70013808,,,,Sediment,Bed Sediment,96,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801066,8/30/88,17:30:00,PDT,USGS-12500430,NWIS-70013809,,,,Sediment,Bed Sediment,99,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801066,8/30/88,17:30:00,PDT,USGS-12500430,NWIS-70013810,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801066,8/30/88,17:30:00,PDT,USGS-12500430,NWIS-70013811,,,,Sediment,Bed Sediment,28,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801066,8/30/88,17:30:00,PDT,USGS-12500430,NWIS-70013812,,,,Sediment,Bed Sediment,59,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801066,8/30/88,17:30:00,PDT,USGS-12500430,NWIS-70013813,,,,Sediment,Bed Sediment,13,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801066,8/30/88,17:30:00,PDT,USGS-12500430,NWIS-70013814,,,,Sediment,Bed Sediment,10,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801071,8/31/88,15:35:00,PDT,USGS-12508850,NWIS-70014229,,,,Sediment,Bed Sediment,8,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801071,8/31/88,15:35:00,PDT,USGS-12508850,NWIS-70014230,,,,Sediment,Bed Sediment,73,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801071,8/31/88,15:35:00,PDT,USGS-12508850,NWIS-70014231,,,,Sediment,Bed Sediment,97,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801071,8/31/88,15:35:00,PDT,USGS-12508850,NWIS-70014232,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801071,8/31/88,15:35:00,PDT,USGS-12508850,NWIS-70014233,,,,Sediment,Bed Sediment,16,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801071,8/31/88,15:35:00,PDT,USGS-12508850,NWIS-70014234,,,,Sediment,Bed Sediment,35,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801071,8/31/88,15:35:00,PDT,USGS-12508850,NWIS-70014235,,,,Sediment,Bed Sediment,8,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801071,8/31/88,15:35:00,PDT,USGS-12508850,NWIS-70014236,,,,Sediment,Bed Sediment,6,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801062,8/31/88,10:30:00,PDT,USGS-12478300,NWIS-70013568,,,,Sediment,Bed Sediment,1,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801062,8/31/88,10:30:00,PDT,USGS-12478300,NWIS-70013562,,,,Sediment,Bed Sediment,1,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801062,8/31/88,10:30:00,PDT,USGS-12478300,NWIS-70013563,,,,Sediment,Bed Sediment,3,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801062,8/31/88,10:30:00,PDT,USGS-12478300,NWIS-70013564,,,,Sediment,Bed Sediment,18,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801062,8/31/88,10:30:00,PDT,USGS-12478300,NWIS-70013565,,,,Sediment,Bed Sediment,45,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801062,8/31/88,10:30:00,PDT,USGS-12478300,NWIS-70013566,,,,Sediment,Bed Sediment,72,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801062,8/31/88,10:30:00,PDT,USGS-12478300,NWIS-70013567,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801062,8/31/88,10:30:00,PDT,USGS-12478300,NWIS-70013569,,,,Sediment,Bed Sediment,1,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801065,8/31/88,16:30:00,PDT,USGS-12484480,NWIS-70013721,,,,Sediment,Bed Sediment,8,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801065,8/31/88,16:30:00,PDT,USGS-12484480,NWIS-70013722,,,,Sediment,Bed Sediment,65,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801065,8/31/88,16:30:00,PDT,USGS-12484480,NWIS-70013723,,,,Sediment,Bed Sediment,86,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801065,8/31/88,16:30:00,PDT,USGS-12484480,NWIS-70013724,,,,Sediment,Bed Sediment,95,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801065,8/31/88,16:30:00,PDT,USGS-12484480,NWIS-70013725,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801065,8/31/88,16:30:00,PDT,USGS-12484480,NWIS-70013726,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801065,8/31/88,16:30:00,PDT,USGS-12484480,NWIS-70013727,,,,Sediment,Bed Sediment,15,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801065,8/31/88,16:30:00,PDT,USGS-12484480,NWIS-70013728,,,,Sediment,Bed Sediment,33,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801065,8/31/88,16:30:00,PDT,USGS-12484480,NWIS-70013729,,,,Sediment,Bed Sediment,9,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801065,8/31/88,16:30:00,PDT,USGS-12484480,NWIS-70013730,,,,Sediment,Bed Sediment,8,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801070,8/31/88,15:30:00,PDT,USGS-12508850,NWIS-70014145,,,,Sediment,Bed Sediment,6,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801070,8/31/88,15:30:00,PDT,USGS-12508850,NWIS-70014146,,,,Sediment,Bed Sediment,63,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801070,8/31/88,15:30:00,PDT,USGS-12508850,NWIS-70014147,,,,Sediment,Bed Sediment,94,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801070,8/31/88,15:30:00,PDT,USGS-12508850,NWIS-70014148,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801070,8/31/88,15:30:00,PDT,USGS-12508850,NWIS-70014149,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801070,8/31/88,15:30:00,PDT,USGS-12508850,NWIS-70014150,,,,Sediment,Bed Sediment,12,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801070,8/31/88,15:30:00,PDT,USGS-12508850,NWIS-70014151,,,,Sediment,Bed Sediment,28,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801070,8/31/88,15:30:00,PDT,USGS-12508850,NWIS-70014152,,,,Sediment,Bed Sediment,7,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801070,8/31/88,15:30:00,PDT,USGS-12508850,NWIS-70014153,,,,Sediment,Bed Sediment,5,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801073,8/31/88,16:30:00,PDT,USGS-12508850,NWIS-70014317,,,,Sediment,Bed Sediment,8,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801073,8/31/88,16:30:00,PDT,USGS-12508850,NWIS-70014312,,,,Sediment,Bed Sediment,8,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801073,8/31/88,16:30:00,PDT,USGS-12508850,NWIS-70014313,,,,Sediment,Bed Sediment,50,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801073,8/31/88,16:30:00,PDT,USGS-12508850,NWIS-70014314,,,,Sediment,Bed Sediment,90,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801073,8/31/88,16:30:00,PDT,USGS-12508850,NWIS-70014315,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801073,8/31/88,16:30:00,PDT,USGS-12508850,NWIS-70014316,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801073,8/31/88,16:30:00,PDT,USGS-12508850,NWIS-70014318,,,,Sediment,Bed Sediment,20,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801073,8/31/88,16:30:00,PDT,USGS-12508850,NWIS-70014319,,,,Sediment,Bed Sediment,5,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801073,8/31/88,16:30:00,PDT,USGS-12508850,NWIS-70014320,,,,Sediment,Bed Sediment,4,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014396,,,,Sediment,Bed Sediment,2,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014397,,,,Sediment,Bed Sediment,6,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014398,,,,Sediment,Bed Sediment,13,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014399,,,,Sediment,Bed Sediment,53,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014400,,,,Sediment,Bed Sediment,98,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014401,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014402,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 2 mm,80169
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014403,,,,Sediment,Bed Sediment,2,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014404,,,,Sediment,Bed Sediment,4,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014405,,,,Sediment,Bed Sediment,2,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801074,8/31/88,10:00:00,PDT,USGS-12510500,NWIS-70014406,,,,Sediment,Bed Sediment,2,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802067,9/1/88,9:00:00,PDT,USGS-461744119522400,NWIS-70029766,,,,Sediment,Bed Sediment,4,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802067,9/1/88,9:00:00,PDT,USGS-461744119522400,NWIS-70029767,,,,Sediment,Bed Sediment,23,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802067,9/1/88,9:00:00,PDT,USGS-461744119522400,NWIS-70029768,,,,Sediment,Bed Sediment,53,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802067,9/1/88,9:00:00,PDT,USGS-461744119522400,NWIS-70029769,,,,Sediment,Bed Sediment,92,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802067,9/1/88,9:00:00,PDT,USGS-461744119522400,NWIS-70029770,,,,Sediment,Bed Sediment,99,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802067,9/1/88,9:00:00,PDT,USGS-461744119522400,NWIS-70029771,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802067,9/1/88,9:00:00,PDT,USGS-461744119522400,NWIS-70029772,,,,Sediment,Bed Sediment,8,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802067,9/1/88,9:00:00,PDT,USGS-461744119522400,NWIS-70029773,,,,Sediment,Bed Sediment,13,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802067,9/1/88,9:00:00,PDT,USGS-461744119522400,NWIS-70029774,,,,Sediment,Bed Sediment,5,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802067,9/1/88,9:00:00,PDT,USGS-461744119522400,NWIS-70029775,,,,Sediment,Bed Sediment,4,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802065,9/1/88,10:00:00,PDT,USGS-463501120353300,NWIS-70029606,,,,Sediment,Bed Sediment,10,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802065,9/1/88,10:00:00,PDT,USGS-463501120353300,NWIS-70029607,,,,Sediment,Bed Sediment,45,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802065,9/1/88,10:00:00,PDT,USGS-463501120353300,NWIS-70029608,,,,Sediment,Bed Sediment,62,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802065,9/1/88,10:00:00,PDT,USGS-463501120353300,NWIS-70029609,,,,Sediment,Bed Sediment,81,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802065,9/1/88,10:00:00,PDT,USGS-463501120353300,NWIS-70029610,,,,Sediment,Bed Sediment,96,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802065,9/1/88,10:00:00,PDT,USGS-463501120353300,NWIS-70029611,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802065,9/1/88,10:00:00,PDT,USGS-463501120353300,NWIS-70029612,,,,Sediment,Bed Sediment,16,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802065,9/1/88,10:00:00,PDT,USGS-463501120353300,NWIS-70029613,,,,Sediment,Bed Sediment,27,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802065,9/1/88,10:00:00,PDT,USGS-463501120353300,NWIS-70029614,,,,Sediment,Bed Sediment,11,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98802065,9/1/88,10:00:00,PDT,USGS-463501120353300,NWIS-70029615,,,,Sediment,Bed Sediment,9,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801068,9/2/88,10:00:00,PDT,USGS-12505460,NWIS-70013980,,,,Sediment,Bed Sediment,8,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801068,9/2/88,10:00:00,PDT,USGS-12505460,NWIS-70013975,,,,Sediment,Bed Sediment,4,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801068,9/2/88,10:00:00,PDT,USGS-12505460,NWIS-70013976,,,,Sediment,Bed Sediment,71,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801068,9/2/88,10:00:00,PDT,USGS-12505460,NWIS-70013977,,,,Sediment,Bed Sediment,97,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801068,9/2/88,10:00:00,PDT,USGS-12505460,NWIS-70013978,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801068,9/2/88,10:00:00,PDT,USGS-12505460,NWIS-70013979,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801068,9/2/88,10:00:00,PDT,USGS-12505460,NWIS-70013981,,,,Sediment,Bed Sediment,28,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801068,9/2/88,10:00:00,PDT,USGS-12505460,NWIS-70013982,,,,Sediment,Bed Sediment,6,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801068,9/2/88,10:00:00,PDT,USGS-12505460,NWIS-70013983,,,,Sediment,Bed Sediment,4,%,,Accepted,,Actual,< 0.002 mm,80294
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801067,8/30/88,14:30:00,PDT,USGS-12500445,NWIS-70013890,,,,Sediment,Bed Sediment,14,%,,Accepted,,Actual,< 0.004 mm,80157
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801067,8/30/88,14:30:00,PDT,USGS-12500445,NWIS-70013891,,,,Sediment,Bed Sediment,62,%,,Accepted,,Actual,< 0.0625 mm,80164
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801067,8/30/88,14:30:00,PDT,USGS-12500445,NWIS-70013892,,,,Sediment,Bed Sediment,77,%,,Accepted,,Actual,< 0.125 mm,80165
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801067,8/30/88,14:30:00,PDT,USGS-12500445,NWIS-70013893,,,,Sediment,Bed Sediment,93,%,,Accepted,,Actual,< 0.25 mm,80166
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801067,8/30/88,14:30:00,PDT,USGS-12500445,NWIS-70013894,,,,Sediment,Bed Sediment,99,%,,Accepted,,Actual,< 0.5 mm,80167
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801067,8/30/88,14:30:00,PDT,USGS-12500445,NWIS-70013895,,,,Sediment,Bed Sediment,100,%,,Accepted,,Actual,< 1 mm,80168
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801067,8/30/88,14:30:00,PDT,USGS-12500445,NWIS-70013896,,,,Sediment,Bed Sediment,28,%,,Accepted,,Actual,< 0.016 mm,80282
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801067,8/30/88,14:30:00,PDT,USGS-12500445,NWIS-70013897,,,,Sediment,Bed Sediment,45,%,,Accepted,,Actual,< 0.031 mm,80283
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801067,8/30/88,14:30:00,PDT,USGS-12500445,NWIS-70013898,,,,Sediment,Bed Sediment,16,%,,Accepted,,Actual,< 0.008 mm,80293
+USGS-WA,USGS Washington Water Science Center,nwiswa.01.98801067,8/30/88,14:30:00,PDT,USGS-12500445,NWIS-70013899,,,,Sediment,Bed Sediment,13,%,,Accepted,,Actual,< 0.002 mm,80294

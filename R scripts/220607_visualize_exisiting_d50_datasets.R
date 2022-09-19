@@ -80,14 +80,16 @@ nexss_map <- ggplot() +
   geom_sf(data = d50_sf, aes(size = StreamOrde)) +
   geom_sf(data = d50_sf, aes(size = StreamOrde * 0.6, color = D50_mm_nexss), alpha = 0.8) + 
   scale_color_viridis_c(trans = "sqrt") + 
-  labs(title = "D50 (mm) -  NEXSS")
+  labs(title = "D50 (mm) -  NEXSS", color = "d50 (mm)", size = "Stream \n Order")
 
 gupta_map <- ggplot() +
   geom_sf(data = watershed) +
   geom_sf(data = d50_sf, aes(size = StreamOrde)) +
   geom_sf(data = d50_sf, aes(size = StreamOrde * 0.6, color = D50_mm_guta), alpha = 0.8) + 
   scale_color_viridis_c(trans = "sqrt") + 
-  labs(title = "D50 (mm) -  Gupta")
+  labs(title = "D50 (mm) -  Abeyshu", color = "d50 (mm)", size = "Stream \n Order")
+
+
 
 plot_grid(nexss_map, gupta_map, boxplot, rel_widths = c(1, 1, 0.5), nrow = 1)
 ggsave("figures/220607_d50_maps.pdf", width = 15, height = 5)

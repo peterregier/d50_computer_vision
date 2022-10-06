@@ -18,14 +18,14 @@ theme_set(theme_bw())
 
 
 # 2. Import data ---------------------------------------------------------------
-yolo_raw <- read_csv("data/220728/d50/d50_Train1_Prediction1_40.csv") %>% 
+yolo_visual <- read_csv("data/220728/d50/d50_Train1_Prediction1_40.csv") %>% 
   clean_names() %>% 
   filter(folder == "yes" | folder == "maybe"| folder == "no") %>% 
   separate(name, into = c("study", "site", "date", "id")) %>% 
   filter(study != "PNNL")
   
 
-ggplot(yolo_raw, aes(fct_reorder(folder, yolo_accuracy_percent), yolo_accuracy_percent)) + 
+ggplot(yolo_visual, aes(fct_reorder(folder, yolo_accuracy_percent), yolo_accuracy_percent)) + 
   geom_boxplot(outlier.color = NA) + 
   geom_jitter(alpha = 0.5, width = 0.1) + 
   labs(title = "Visual assessment", x = "Image suitability", y = "YOLO accuracy (%)")

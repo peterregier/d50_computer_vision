@@ -11,7 +11,7 @@
 
 ## Load packages
 require(pacman)
-p_load(tidyverse, cowplot, janitor, purrr)
+p_load(tidyverse, cowplot, janitor, purrr, hydroGOF)
 
 ## Set ggplot theme
 theme_set(theme_bw())
@@ -48,21 +48,40 @@ make_plots <- function(data,
     rename("train" = train_col,
            "test" = test_col) 
   
+  xmin = min(x$train)
+  xmax = max(x$train)
+  ymin = min(x$test)
+  ymax = max(x$test)
+  axis_min = min(xmin, ymin)
+  axis_max = max(xmax, ymax)
+  
   ## Fit for actual v estimated d50
   m = round(summary(lm(test ~ train, data = x))[[4]][2, 1], 2)
   b = round(summary(lm(test ~ train, data = x))[[4]][1, 1], 2)
-  r2 = round(summary(lm(test ~ train, data = x))[[9]], 2)
+  #r2 = round(summary(lm(test ~ train, data = x))[[9]], 2)
   fit_line = paste0("y = ", m, "x + ", b)
   
+  ## Calculate metrics to assess model performance
+  rmse = round((hydroGOF::rmse(x$train, x$test) / mean(x$train)) * 100, 1) 
+  mae = round((hydroGOF::mae(x$train, x$test) / mean(x$train)) * 100, 1) 
+  r2 = hydroGOF::gof(x$train, x$test)["R2", ]
+  nse = round(hydroGOF::NSE(x$train, x$test), 2)
+  
   x_position = max(x$train) * 0.5
-  y_position = max(x$test)
+  y_position = axis_max
   
   p <- ggplot(x, aes(train, test)) + 
+    geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
+    geom_smooth(method = "lm", se = F) +
     geom_point() + 
-    geom_smooth(method = "lm", se = F) + 
     labs(title = title, x = x_lab, y = y_lab) +
     annotate("text", x = x_position, y = y_position, label = fit_line) + 
-    annotate("text", x = x_position, y = y_position * 0.95, label = paste0("R2adj = ", r2)) + 
+    annotate("text", x = x_position, y = y_position * 0.95, label = paste0("R2 = ", r2)) + 
+    annotate("text", x = x_position, y = y_position * 0.9, label = paste0("NSE = ", nse)) + 
+    annotate("text", x = x_position, y = y_position * 0.85, label = paste0("RMSE = ", rmse, "%")) + 
+    annotate("text", x = x_position, y = y_position * 0.8, label = paste0("MAE = ", mae, "%")) + 
+    scale_x_continuous(limits = c(axis_min, axis_max)) + 
+    scale_y_continuous(limits = c(axis_min, axis_max)) + 
     theme(plot.title = element_text(hjust = 0.5))
   
   return(p)
@@ -71,7 +90,7 @@ make_plots <- function(data,
 p1 <- make_plots(plot_yolo, 
            "long_axis_mm_train", 
            "long_axis_mm_test", 
-           "d50",
+           "",
            "Manual: d50 (mm)", 
            "YOLO: d50 (mm)")
 
@@ -89,5 +108,9 @@ p3 <- make_plots(plot_yolo,
            "Manual: coverage (%)", 
            "YOLO: coverage (%)")
 
-plot_grid(p2, p3, p1, nrow = 1)
-ggsave("figures/figure3.png", width = 9, height = 4) 
+p1
+ggsave("figures/3_figure3.png", width = 4, height = 4) 
+
+
+
+\

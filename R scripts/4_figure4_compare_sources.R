@@ -98,9 +98,11 @@ summary(lm(accuracy~d50_mm, data = yolo_so))
 nexss_guta <- read_csv("data/RC2_all_D50.csv") %>% 
   clean_names() %>% 
   mutate(site_id = str_trim(str_remove_all(site_id, "[[:punct:]]"))) %>% 
-  rename("stream_order" = stream_orde) %>% 
+  rename("stream_order" = stream_orde, 
+         "d50_mm_NEXSS" = d50_mm_nexss, 
+         "d50_mm_Abeshu" = d50_mm_guta) %>% 
   pivot_longer(cols = c(contains("d50_mm")), names_to = "source", values_to = "d50_mm") %>% 
-  mutate(source = str_to_title(str_remove(source, "d50_mm_"))) %>% 
+  mutate(source = str_remove(source, "d50_mm_")) %>% 
   select(site_id, source, d50_mm) %>% 
   filter(site_id %in% yolo$site_id)
 
@@ -112,6 +114,14 @@ boxplot <- ggplot(df_all, aes(source, d50_mm)) +
   geom_boxplot(aes(fill = source), alpha = 0.5, show.legend = F) + 
   scale_y_continuous(trans = "sqrt")  + 
   labs(x = "Estimate source", y = "d50 (mm)")
+
+df_all %>% 
+  group_by(source) %>% 
+  summarize(mean(d50_mm),
+            sd(d50_mm))
+
+# wilcox.test(df_all %>% filter(source == "Abeshu") %>% pull(d50_mm), 
+#             df_all %>% filter(source == "NEXSS") %>% pull(d50_mm))
 
 ## Last, read in the Abeyshu data: 
 abeyshu_raw <- read_csv("data/abeyshu_fig1_digitized.csv")
@@ -134,49 +144,3 @@ stream_order_boxplot <- ggplot(df_all, aes(stream_order, d50_mm)) +
 plot_grid(boxplot, histograms, stream_order_boxplot, 
           rel_widths = c(0.75, 1, 1), nrow = 1, labels = c("A", "B", "C"))
 ggsave("figures/4_figure4.png", width = 7, height = 4)
-
-
-df_scatterplots <- df_all %>% 
-  select(site_id, stream_order, source, d50_mm) %>% 
-  pivot_wider(names_from = source, values_from = d50_mm)
-
-nexss_yolo <- ggplot(df_scatterplots, aes(Nexss, YOLO)) + 
-  geom_point(aes(color = stream_order)) + 
-  scale_color_viridis_d()
-
-guta_yolo <- ggplot(df_scatterplots, aes(Guta, YOLO)) + 
-  geom_point(aes(color = stream_order)) + 
-  scale_color_viridis_d()
-
-scatterplots <- plot_grid(nexss_yolo, guta_yolo, ncol = 1)
-
-df_sf <- inner_join(sites, df_raw)
-
-maps <- ggplot() +
-  geom_sf(data = watershed) +
-  geom_sf(data = df_sf, aes(size = stream_orde)) +
-  geom_sf(data = df_sf, aes(size = stream_orde * 0.6, color = d50_mm), alpha = 0.8) + 
-  scale_color_viridis_c(trans = "sqrt") + 
-  facet_wrap(~source, ncol = 1) + 
-  labs(color = "d50 (mm)", size = "Stream \n Order")
-
-by_source <- ggplot(df_raw, aes(x = source, y = d50_mm)) + 
-  geom_boxplot() + 
-  geom_hline(yintercept = 0.2) +
-  scale_y_continuous(trans = "sqrt") + 
-  labs(x = "Source", y = "d50 (mm)")
-
-by_order <- ggplot(df_raw, aes(x = as.factor(stream_orde), y = d50_mm, fill = source)) + 
-  geom_boxplot() +
-  scale_y_continuous(trans = "sqrt") + 
-  labs(x = "Stream Order", y = "d50 (mm)", fill = "") + 
-  theme(legend.position = c(0.85, 0.85), 
-        legend.background = element_blank())
-
-boxplots <- plot_grid(by_source, by_order, ncol = 1)
-
-plot_grid(maps, boxplots, nrow = 1)
-ggsave("figures/4_figure4_compare_sources.png")
-
-
-

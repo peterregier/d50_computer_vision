@@ -20,6 +20,9 @@ theme_set(theme_bw())
 ## Set CRS for all layers
 common_crs = 4326
 
+## set a manual colorblind-friendly color scheme for comparing methods
+method_color_scheme = c("#1b9e77", "#d95f02", "#7570b3")
+
 
 # 2. Import map shapefiles -----------------------------------------------------
 
@@ -113,6 +116,7 @@ df_all <- bind_rows(yolo, nexss_guta) %>%
 boxplot <- ggplot(df_all, aes(source, d50_mm)) + 
   geom_boxplot(aes(fill = source), alpha = 0.5, show.legend = F) + 
   scale_y_continuous(trans = "sqrt")  + 
+  scale_fill_manual(values = method_color_scheme) +
   labs(x = "Estimate source", y = "d50 (mm)")
 
 df_all %>% 
@@ -132,6 +136,7 @@ histograms <- ggplot() +
   geom_col(data = abeyshu_raw, aes(d50_mm_log2, count), alpha = 0.5) + 
   geom_histogram(data = df_histogram, aes(d50_mm_log2, fill = source), 
                  color = "black", alpha = 0.5, show.legend = F) + 
+  scale_fill_manual(values = method_color_scheme) +
   facet_wrap(~source, ncol = 1) +
   labs(x = "log2 d50", fill = "")  
 

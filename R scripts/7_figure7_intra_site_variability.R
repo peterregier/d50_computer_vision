@@ -62,4 +62,3 @@ ggplot(yolo, aes(site)) +
 ggsave("figures/7_intra_site_variability.png", width = 5, height = 4)
 
 
-

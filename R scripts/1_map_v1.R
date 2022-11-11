@@ -12,6 +12,8 @@ require(pacman)
 p_load(tidyverse, # keep things tidy
        sf, # simple spatial features
        purrr,
+       janitor,
+       rnaturalearth, 
        ggthemes) # theme_map()
 
 ## Set a common crs
@@ -19,9 +21,18 @@ common_crs = 4326
 
 # 2. Import data ---------------------------------------------------------------
 
-site_info <- read_csv("data/RC2_all_stream_Attributes_updated.csv") %>% 
-  # remove white space after removing special characters
-  mutate(site_ID = str_trim(str_replace_all(site_ID, "[^[:alnum:]]", "")), side = "both")
+## Archived because stream orders were wrongly attributed (downstream YR site = 2)
+# site_info <- read_csv("data/RC2_all_stream_Attributes_updated.csv") %>% 
+#   # remove white space after removing special characters
+#   mutate(site_ID = str_trim(str_replace_all(site_ID, "[^[:alnum:]]", "")), side = "both")
+
+# site_info2 <- read_csv("data/ForKS_New_Train1_Prediction1_10_40.csv") %>% 
+#   clean_names() %>% 
+#   select(latitude, longitude, stream_order)
+
+site_info <- read_csv("data/RC2 Spatial Study_Responses_Form Responses 1_updated 2022-02-01.csv") %>% 
+  clean_names()
+  select(longitude_dd, latitude_dd, stream_gradient)
 
 # Load shapefile of sites
 sites_shp <- read_sf("data/gis/sites/022522_all_sites_NHD_streamline_matched.shp") %>% 
@@ -32,9 +43,17 @@ sites_shp <- read_sf("data/gis/sites/022522_all_sites_NHD_streamline_matched.shp
 sites <- sites_shp %>% 
   inner_join(site_info, by = "site_ID")
 
+# sites2 <- st_as_sf(site_info2, coords = c("longitude", "latitude"), 
+#                    crs = common_crs)
+
 # Create an sf for the watershed boundary
 watershed <- read_sf("data/gis/NHD_H_17030001_HU8_Shape/Shape/WBDHU4.shp") %>% 
   st_transform(common_crs)
+
+
+# ggplot() + 
+#   geom_sf(data = watershed) + 
+#   geom_sf(data = sites2, size = 3, aes(color = as.factor(stream_order)))
 
 # Set up list of shapefiles to read in
 flowline_files <- c("data/gis/NHD_H_17030001_HU8_Shape/Shape/NHDFlowline.shp", 

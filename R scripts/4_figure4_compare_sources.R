@@ -121,7 +121,7 @@ boxplot <- ggplot(df_all, aes(source, d50_mm)) +
 
 df_all %>% 
   group_by(source) %>% 
-  summarize(mean(d50_mm),
+  summarize(median(d50_mm),
             sd(d50_mm))
 
 # wilcox.test(df_all %>% filter(source == "Abeshu") %>% pull(d50_mm), 

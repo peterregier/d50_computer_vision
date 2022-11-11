@@ -19,21 +19,24 @@ theme_set(theme_bw())
 
 # 2. Import model fit data and calculate stats ---------------------------------
 
-yolo <- read_csv("data/220728/d50/d50_Train1_Prediction1_40.csv") %>% 
+yolo <- read_csv("data/220728/d50/d50_Train1_Prediction1_40.csv") %>% #swapped out 11/9/22 per YC
+    #read_csv("data/12") %>% 
   clean_names() %>% 
   filter(label == 0 | label == 4) %>% 
+  #filter(initial_classification == "none" | 
+  #         initial_classification == "test") %>% 
   separate(name, into = c("study", "site", "date", "id")) %>% 
   filter(study != "PNNL") %>% 
-  mutate(long_axis_mm = long_axis_m * 1000) %>% 
-  select(study, site, label, long_axis_mm, yolo_box_number, area_covered_percent) %>% 
-  mutate(label = case_when(label == 0 ~ "train", 
+  mutate(long_axis_mm = long_axis_m * 1000) %>%
+  select(study, site, label, long_axis_mm, yolo_box_number, area_covered_percent) %>%
+  mutate(label = case_when(label == 0 ~ "train",
                            label == 4 ~ "test"))
 
 plot_yolo <- yolo %>%  
-  pivot_wider(names_from = "label", values_from = c("long_axis_mm",
-                                                    "yolo_box_number", 
-                                                    "area_covered_percent")) 
-
+  select(label, long_axis_mm) %>% 
+  pivot_wider(names_from = "label", 
+              values_from = "long_axis_mm") %>% 
+  unnest()
 
 # 3. Create plots --------------------------------------------------------------
 
@@ -77,9 +80,9 @@ make_plots <- function(data,
     labs(title = title, x = x_lab, y = y_lab) +
     annotate("text", x = x_position, y = y_position, label = fit_line) + 
     annotate("text", x = x_position, y = y_position * 0.95, label = paste0("R2 = ", r2)) + 
-    annotate("text", x = x_position, y = y_position * 0.9, label = paste0("NSE = ", nse)) + 
-    annotate("text", x = x_position, y = y_position * 0.85, label = paste0("RMSE = ", rmse, "%")) + 
-    annotate("text", x = x_position, y = y_position * 0.8, label = paste0("MAE = ", mae, "%")) + 
+    #annotate("text", x = x_position, y = y_position * 0.9, label = paste0("NSE = ", nse)) + 
+    annotate("text", x = x_position, y = y_position * 0.9, label = paste0("RMSE = ", rmse, "%")) + 
+    #annotate("text", x = x_position, y = y_position * 0.8, label = paste0("MAE = ", mae, "%")) + 
     scale_x_continuous(limits = c(axis_min, axis_max)) + 
     scale_y_continuous(limits = c(axis_min, axis_max)) + 
     theme(plot.title = element_text(hjust = 0.5))
@@ -88,8 +91,8 @@ make_plots <- function(data,
 }
 
 p1 <- make_plots(plot_yolo, 
-           "long_axis_mm_train", 
-           "long_axis_mm_test", 
+           "train", 
+           "test", 
            "",
            "Manual: d50 (mm)", 
            "YOLO: d50 (mm)")
@@ -111,6 +114,3 @@ p3 <- make_plots(plot_yolo,
 p1
 ggsave("figures/3_figure3.png", width = 4, height = 4) 
 
-
-
-\

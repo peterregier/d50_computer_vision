@@ -70,7 +70,7 @@ panel_a <- ggplot(df_long, aes(source, d50_mm)) +
 
 ## For stats in paper: 
 compare_means(d50_mm ~ source, data = df_long)
-df_long %>% group_by(source) %>% summarize(median(d50_mm), 
+df_long %>% group_by(source) %>% summarize(mean(d50_mm), 
                                            sd(d50_mm))
 
 # 5. Create distribution plots (Panel B) ---------------------------------------

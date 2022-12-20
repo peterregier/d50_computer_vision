@@ -23,7 +23,7 @@ p_load(tidyverse)
 stream_order_raw <- read_csv("data/RC2_all_stream_Attributes_updated_VGC.csv") %>% 
   clean_names() %>% 
   rename("stream_order" = stream_orde) %>% 
-  select(stream_order, site_id) 
+  select(stream_order, site_id)
 
 ## This spreadsheet is missing two sites (W20 and U20), which are manually added.
 ## Stream orders from these sites are taken from an older file originally provided

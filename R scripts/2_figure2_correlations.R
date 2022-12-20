@@ -37,6 +37,7 @@ fit_line = paste0("y = ", m, "x + ", b)
 
 ## Calculate metrics to assess model performance
 r2 = hydroGOF::gof(df_d50$train, df_d50$test)["R2", ]
+r2_formatted = paste("R^2 == ", r2)
 rmse = round((hydroGOF::rmse(df_d50$train, df_d50$test) / mean(df_d50$train)) * 100, 1) 
 
 
@@ -46,7 +47,7 @@ p_all <- ggplot(df_d50, aes(train, test)) +
   geom_point() + 
   labs(title = "Full-image d50", x = "d50 (Train, mm)", y = "d50 (Test, mm)") +
   annotate("text", x = 20, y = 42, label = fit_line) + 
-  annotate("text", x = 20, y = 42 * 0.95, label = paste0("R2 = ", r2)) + 
+  annotate("text", x = 20, y = 42 * 0.95, label = r2_formatted, parse=TRUE) + 
   annotate("text", x = 20, y = 42 * 0.9, label = paste0("RMSE = ", rmse, "%")) + 
   annotate("text", x = 20, y = 42 * 0.85, label = "n = 10") + 
   theme(plot.title = element_text(hjust = 0.5))
@@ -119,6 +120,7 @@ fit_line_bin = paste0("y = ", m1, "x + ", b1)
 
 ## Calculate metrics to assess model performance
 r2_bin = hydroGOF::gof(df_binned$d50_train, df_binned$d50_test)["R2", ]
+r2_bin_formatted = paste("R^2 == ", r2_bin)
 rmse_bin = round((hydroGOF::rmse(df_binned$d50_train, df_binned$d50_test) / mean(df_binned$d50_train)) * 100, 1) 
 
 ## Make subset plot
@@ -129,7 +131,7 @@ p_subset <- ggplot(df_binned, aes(d50_train, d50_test)) +
   labs(title = "Subsetted image median grain size", x = "Median grain size (Train, mm)", y = "Median grain size (Test, mm)") + 
   scale_color_viridis_c() + 
   annotate("text", x = 20, y = 50, label = fit_line_bin) + 
-  annotate("text", x = 20, y = 50 * 0.95, label = paste0("R2 = ", r2_bin)) + 
+  annotate("text", x = 20, y = 50 * 0.95, label = r2_bin_formatted, parse = TRUE) + 
   annotate("text", x = 20, y = 50 * 0.9, label = paste0("RMSE = ", rmse_bin, "%")) + 
   annotate("text", x = 20, y = 50 * 0.85, label = "n = 39") + 
   theme(plot.title = element_text(hjust = 0.5))

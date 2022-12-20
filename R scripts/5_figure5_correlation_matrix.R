@@ -19,6 +19,8 @@ p_load(tidyverse,
        ggsflabel,
        bestNormalize,
        nhdplusTools,
+       plotly,
+       sf,
        party)
 
 
@@ -39,7 +41,7 @@ df_sf <- st_as_sf(df_bin, coords = c("long", "lat"), crs = 4326)
 
 ## Create an sf for the watershed boundary
 watershed <- read_sf("data/gis/NHD_H_17030001_HU8_Shape/Shape/WBDHU4.shp") %>% 
-  st_transform(common_crs)
+  st_transform(4326)
 
 ## Read in flowlines using nhdplusTools
 flowlines <- get_nhdplus(AOI = watershed)
@@ -48,6 +50,7 @@ flowlines <- get_nhdplus(AOI = watershed)
 comids <- nhdplusTools::get_flowline_index(flines = flowlines, 
                                            points = df_sf)
 
+## Add comids to 
 df_bin_comid <- df_bin %>%
  add_column(comid = comids %>% pull(COMID))
 
@@ -61,6 +64,25 @@ variables_raw <- read_csv("data/correlations/nhd_yrb_D50_variable.csv") %>%
 
 df <- left_join(df_bin_comid, variables_raw, by = "comid")
 
+#### SIDEBAR #######
+make_boxplot <- function(var){
+  
+  mean_value = mean(df %>% drop_na() %>% pull({{var}}))
+  ggplot(df, aes(factor(stream_order), {{var}})) + 
+    geom_boxplot(outlier.alpha = 0, width = 0.2) + 
+    geom_jitter(alpha = 0.5, width = 0.2) + 
+    geom_hline(yintercept = mean_value) +
+    xlab("Stream order")
+}
+
+plot_grid(make_boxplot(cat_basin_slope) + ylab("Slope (%)"), 
+          make_boxplot(cat_elev_mean) + ylab("Elevation (m)"), ncol = 1)
+ggsave("figures/S2_characteristics_by_streamorder.png", width = 5, height = 4)
+
+
+
+
+
 df %>% filter(if_any(everything(), is.na)) %>% 
   pull(comid)
 
@@ -68,13 +90,39 @@ df %>% filter(if_any(everything(), is.na)) %>%
 ## from the nhdplusTools package, and those are slightly different than the 
 ## COMIDs that KS assigned. Since there are no site names attached to the 
 ## spreadsheet provided by KS, that makes things difficult. 
-df %>% filter(if_any(everything(), is.na)) %>% select(site_id, comid)
+mismatches <- df %>% filter(if_any(everything(), is.na)) %>% select(site_id, comid)
+
+ks_dropped_comids <- variables_raw %>% 
+  filter(!(comid %in% df_bin_comid$comid)) %>%
+  pull(comid)
+
+ks_dropped <- get_nhdplus(comid = ks_dropped_comids)
+
+## First, let's isolate the problems
+## 1. There are 6 sites that don't match between the two datasets:
+
+df_sf_crop <- df_sf %>% 
+  st_crop(xmin=--121, xmax=-120, ymin = 46, ymax = 46.85)
+
+ggplot() + 
+  geom_sf(data = df_sf_crop, alpha = 0.3) + 
+  #geom_sf_label(data = df_sf, aes(label = site_id), nudge_y = 0.1) + 
+  geom_sf(data = ks_dropped %>% filter(comid == "24126487"), color = "blue")
+
+ggplotly(p)
+
+## 2. KS file has 38, mine has 40, so there are at least 2 sites missing
+### Currently looks like W20 and S49R
+
+
+
 
 ## Here are the sites in df_bin_comid that aren't in KS layer
 setdiff(df_bin_comid$comid, variables_raw$comid)
 
 ## And here are the comids in KS layer that don't match
 old_comids = setdiff(variables_raw$comid, df_bin_comid$comid)
+
 
 reassigned_comids <- tibble(old_comid = old_comids, 
                             site = c("T07", "S26R", NA, NA, "S28RE", "S75"))
@@ -84,15 +132,40 @@ reassigned_comids <- tibble(old_comid = old_comids,
 
 site = old_comids[1]
 
+sf0 <- df %>% st_as_sf(coords = c("long", "lat"), crs = 4326)
+
 sf1 <- df %>% filter(if_any(everything(), is.na)) %>% 
   select(site_id, lat, long) %>% 
   st_as_sf(coords = c("long", "lat"), crs = 4326)
 
+
+## Manual....
+## g: S13R, S14, S15, S17R, S18R, S19, S19E, S20R, S21R, S23, S24R, S25, S26R, 
+## g: S27R, S28R, S28RE, S29R, S30R, S31, S32, S36, S37, S38, S39, S49R, S51, 
+## g: S55, S56, S63, S71, S72, S75, S77, S82, S83, T02, T03, T07, U20, W20
+
+
+plot_site <- function(i){
+  x <- sf0 %>% slice(i)
+  
+  x_comid <- x %>% pull(comid)
+  
+  ggplot() + 
+    geom_sf(data = flowlines, color = "gray95") + 
+    geom_sf(data = x, alpha = 0.3) + 
+    geom_sf_label(data = x, aes(label = site_id), nudge_y = 0.1) + 
+    geom_sf(data = flowlines %>% filter(comid == x_comid), color = "blue")
+}
+
+plot_site(40)
+
+
 ggplot() + 
   geom_sf(data = flowlines, color = "gray95") + 
-  geom_sf(data = sf1, alpha = 0.3) + 
-  geom_sf_label(data = sf1, aes(label = site_id), nudge_y = 0.1) + 
-  geom_sf(data = flowlines %>% filter(comid %in% old_comids), color = "blue")
+  geom_sf(data = sf0, alpha = 0.3) + 
+  geom_sf_label(data = sf0, aes(label = site_id), nudge_y = 0.1) + 
+  geom_sf(data = flowlines %>% filter(comid %in% sf0$comid), color = "blue")
+
 
 
 

@@ -130,6 +130,3 @@ ggplot() +
   theme_map()
 ggsave("figures/1_wa_map_for_Figure1.png", width = 4, height = 3)
 
-
-x <- read_sf("data/gis/sites/022522_all_sites_NHD_streamline_matched.shp")
-

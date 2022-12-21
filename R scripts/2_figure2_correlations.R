@@ -154,6 +154,6 @@ ggplot(df_binned_raw, aes(d50_train, d50_test)) +
   scale_color_viridis_c() + 
   annotate("text", x = 20, y = 50, label = "n = 40") + 
   theme(plot.title = element_text(hjust = 0.5))
-ggsave("figures/SX_Figure2B_with_outlier.png", width = 4, height = 4)
+ggsave("figures/S1_Figure2B_with_outlier.png", width = 4, height = 4)
 
 

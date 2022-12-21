@@ -50,21 +50,81 @@ flowlines <- get_nhdplus(AOI = watershed)
 comids <- nhdplusTools::get_flowline_index(flines = flowlines, 
                                            points = df_sf)
 
-## Add comids to 
+## Add comids to d50 dataset
 df_bin_comid <- df_bin %>%
  add_column(comid = comids %>% pull(COMID))
 
-
-## Read in watershed variables from KS
-variables_raw <- read_csv("data/correlations/nhd_yrb_D50_variable.csv") %>% 
+## Read in watershed variables from KS. Note that there are 4 COMIDs in here that
+## do not match with the COMIDs pulled from NHD above. They are: 
+## 24125567: this matches to site_id S28RE
+## 24423655: this matches to site_id S49R
+## 24128685: this matches to site_id S75
+## 24423347: this matches to site_id W20
+## These aren't a problem since we can match by site on the new datset
+variables_raw <- read_csv("data/correlations/nhd_yrb_D50_variable_updated.csv") %>% 
   clean_names() %>% 
   select(-contains("d50")) %>% 
-  group_by(comid) %>% 
+  group_by(site_id) %>% 
   summarize(across(everything(), mean))
 
-df <- left_join(df_bin_comid, variables_raw, by = "comid")
+df <- left_join(df_bin_comid, variables_raw, by = "site_id")
 
-#### SIDEBAR #######
+
+# 3. Set up correlations -------------------------------------------------------
+
+## Create correlations for basin-scale variables
+corr_basin <- df %>% 
+  select(contains("d50"), 
+         tot_pet,
+         tot_prsnow, 
+         tot_stream_slope,
+         tot_stream_length,
+         tot_basin_area, 
+         tot_elev_mean, 
+         turban) %>% 
+  cor(method = "spearman") 
+
+## Create correlations for catchment-scale variables
+corr_catchment <- df %>% 
+  select(contains("d50"), 
+         cat_pet,
+         cat_prsnow, 
+         # cat_rfact,
+         # cat_kfact,
+         # cat_run7100,
+         cat_stream_slope,
+         cat_stream_length,
+         cat_basin_area, 
+         cat_elev_mean,
+         urban) %>% 
+  cor(method = "spearman") 
+
+
+# 4. Make correlation plots ----------------------------------------------------
+
+make_corrplot <- function(corr, title){
+  
+  pmat <- cor_pmat(cor(corr))
+  
+  ggcorrplot(corr, 
+             outline.col = "white", 
+             type = "upper", 
+             lab = TRUE, 
+             legend.title = "Correlation",
+             #p.mat = pmat, 
+             #sig.level = 0.001,
+             colors = c("#DC3220", "white", "#005AB5")) + 
+    ggtitle(title) + 
+    theme(legend.position = c(0.75, 0.25))
+}
+
+plot_grid(make_corrplot(corr_basin, "Basin-scale correlations"), 
+          make_corrplot(corr_catchment, "Catchment-scale correlations"), 
+          nrow = 1, labels = c("A", "B"))
+ggsave("figures/5_Figure5_correlations.png", width = 12, height = 6)
+
+
+# 5. Supplemental boxplots -----------------------------------------------------
 make_boxplot <- function(var){
   
   mean_value = mean(df %>% drop_na() %>% pull({{var}}))
@@ -78,231 +138,4 @@ make_boxplot <- function(var){
 plot_grid(make_boxplot(cat_basin_slope) + ylab("Slope (%)"), 
           make_boxplot(cat_elev_mean) + ylab("Elevation (m)"), ncol = 1)
 ggsave("figures/S2_characteristics_by_streamorder.png", width = 5, height = 4)
-
-
-
-
-
-df %>% filter(if_any(everything(), is.na)) %>% 
-  pull(comid)
-
-## Here are the problem sites. Likely what is happening is I'm pulling COMIDs
-## from the nhdplusTools package, and those are slightly different than the 
-## COMIDs that KS assigned. Since there are no site names attached to the 
-## spreadsheet provided by KS, that makes things difficult. 
-mismatches <- df %>% filter(if_any(everything(), is.na)) %>% select(site_id, comid)
-
-ks_dropped_comids <- variables_raw %>% 
-  filter(!(comid %in% df_bin_comid$comid)) %>%
-  pull(comid)
-
-ks_dropped <- get_nhdplus(comid = ks_dropped_comids)
-
-## First, let's isolate the problems
-## 1. There are 6 sites that don't match between the two datasets:
-
-df_sf_crop <- df_sf %>% 
-  st_crop(xmin=--121, xmax=-120, ymin = 46, ymax = 46.85)
-
-ggplot() + 
-  geom_sf(data = df_sf_crop, alpha = 0.3) + 
-  #geom_sf_label(data = df_sf, aes(label = site_id), nudge_y = 0.1) + 
-  geom_sf(data = ks_dropped %>% filter(comid == "24126487"), color = "blue")
-
-ggplotly(p)
-
-## 2. KS file has 38, mine has 40, so there are at least 2 sites missing
-### Currently looks like W20 and S49R
-
-
-
-
-## Here are the sites in df_bin_comid that aren't in KS layer
-setdiff(df_bin_comid$comid, variables_raw$comid)
-
-## And here are the comids in KS layer that don't match
-old_comids = setdiff(variables_raw$comid, df_bin_comid$comid)
-
-
-reassigned_comids <- tibble(old_comid = old_comids, 
-                            site = c("T07", "S26R", NA, NA, "S28RE", "S75"))
-
-## Old_comids #3 is WRONG.
-## old comid #4 is WRONG.
-
-site = old_comids[1]
-
-sf0 <- df %>% st_as_sf(coords = c("long", "lat"), crs = 4326)
-
-sf1 <- df %>% filter(if_any(everything(), is.na)) %>% 
-  select(site_id, lat, long) %>% 
-  st_as_sf(coords = c("long", "lat"), crs = 4326)
-
-
-## Manual....
-## g: S13R, S14, S15, S17R, S18R, S19, S19E, S20R, S21R, S23, S24R, S25, S26R, 
-## g: S27R, S28R, S28RE, S29R, S30R, S31, S32, S36, S37, S38, S39, S49R, S51, 
-## g: S55, S56, S63, S71, S72, S75, S77, S82, S83, T02, T03, T07, U20, W20
-
-
-plot_site <- function(i){
-  x <- sf0 %>% slice(i)
-  
-  x_comid <- x %>% pull(comid)
-  
-  ggplot() + 
-    geom_sf(data = flowlines, color = "gray95") + 
-    geom_sf(data = x, alpha = 0.3) + 
-    geom_sf_label(data = x, aes(label = site_id), nudge_y = 0.1) + 
-    geom_sf(data = flowlines %>% filter(comid == x_comid), color = "blue")
-}
-
-plot_site(40)
-
-
-ggplot() + 
-  geom_sf(data = flowlines, color = "gray95") + 
-  geom_sf(data = sf0, alpha = 0.3) + 
-  geom_sf_label(data = sf0, aes(label = site_id), nudge_y = 0.1) + 
-  geom_sf(data = flowlines %>% filter(comid %in% sf0$comid), color = "blue")
-
-
-
-
-#write_csv(df_bin2, "data/221121_binned_sites_w_comid.csv")
-
-yolo_raw <- read_csv("data/correlations/nhd_yrb_D50_variable.csv") %>% 
-  clean_names() %>% 
-  mutate(d50_mm_yolo = d50m_yolo * 1000) %>% 
-  select(-d50m_yolo) %>% 
-  group_by(comid) %>% 
-  summarize(across(everything(), mean))
-
-nexss_guta <- read_csv("data/RC2_all_D50.csv") %>% 
-  clean_names() %>% 
-  rename("d50_mm_abeshu" = d50_mm_guta) %>% 
-  mutate(site_id = str_trim(str_remove_all(site_id, "[[:punct:]]"))) %>% 
-  rename("stream_order" = stream_orde) %>% 
-  select(comid, site_id, d50_mm_nexss, d50_mm_abeshu, stream_order) %>% 
-  group_by(comid) %>% 
-  summarize(site_id = first(site_id), 
-            across(-site_id, mean))
-  #summarize(across(everything(), mean))
-
-df_raw <- right_join(nexss_guta, yolo_raw, by = "comid") %>% 
-  select(-comid) %>% 
-  drop_na()
-
-setdiff(df_bin$site_id, df_raw$site_id)
-
-
-# 3. Transform data ------------------------------------------------------------
-
-my_list <- df_raw %>% select_if(is.numeric) %>% colnames()
-
-yj_normalize <- function(var){
-  x <- df_raw %>% dplyr::pull({{var}})
-  bc <- bestNormalize::yeojohnson(x) #Boxcox can't handle negative values
-  p <- predict(bc)
-  return(p)
-}
-
-n_list <- list()
-for(i in 1:length(my_list)){
-  n_list[[i]] <- df_raw %>% 
-    mutate(x = yj_normalize(my_list[[i]])) %>% 
-    select(x)
-}
-
-yj_df <- do.call(cbind.data.frame, n_list)
-colnames(yj_df) <- my_list
-
-yolo_n <- as_tibble(yj_df)
-
-corr_tot <- yolo_n %>% 
-  select(contains("d50"), 
-         tot_pet,
-         tot_rfact,
-         tot_kfact,
-         tot_run7100,
-         tot_stream_slope,
-         tot_stream_length,
-         tot_basin_slope,
-         tot_basin_area, 
-         tot_elev_mean, 
-         tot_prsnow, 
-         tot_pet, 
-         turban) %>% 
-  cor(method = "spearman") 
-
-
-corr_cat <- yolo_n %>% 
-  select(contains("d50"), 
-         tot_pet,
-         cat_rfact,
-         cat_kfact,
-         cat_run7100,
-         cat_stream_slope,
-         cat_stream_length,
-         cat_basin_slope,
-         cat_basin_area, 
-         cat_elev_mean,
-         cat_prsnow, 
-         cat_pet,
-         urban, 
-     ) %>% 
-  cor(method = "spearman") 
-
-
-corr_all <- yolo_n %>% 
-  cor(method = "spearman") 
-
-p.mat_tot <- cor_pmat(cor(corr_tot))
-p.mat_cat <- cor_pmat(cor(corr_cat))
-p.mat_all <- cor_pmat(cor(corr_all))
-
-make_corrplot <- function(corr, pmat, title){
-  ggcorrplot(corr, 
-             outline.col = "white", 
-             type = "upper", 
-             lab = TRUE, 
-             p.mat = pmat, 
-             sig.level = 0.05,
-             colors = c("red", "white", "blue")) + 
-    ggtitle(title) + 
-    theme(legend.position = c(0.75, 0.25))
-}
-
-
-make_corrplot(corr_all, p.mat_all, "All correlations")
-
-
-plot_grid(make_corrplot(corr_tot, p.mat_tot, "Basin-scale correlations"), 
-          make_corrplot(corr_cat, p.mat_cat, "Catchment-scale correlations"), 
-          nrow = 1, labels = c("A", "B"))
-ggsave("figures/x_Figure6_correlations.png", width = 12, height = 6)
-
-
-y_mlr <- bind_cols(yolo_n %>% select(d50_mm_yolo), yolo_n %>% select(-contains("d50")))
-
-y_mlr2 <- y_mlr %>% 
-  select(d50_mm_yolo, urban, cat_elev_mean, tot_evi_jas_2012, tot_prsnow, 
-         tot_pet, sinuosity, tot_basin_area)
-
-ranger(d50_mm_yolo ~ ., data = y_mlr)
-
-
-write_csv(y_mlr, "data/y_mlr.csv")
-
-yolo_n %>% 
-  select(contains("d50"), urban) %>% 
-  pivot_longer(cols = c(contains("d50"))) %>% 
-  ggplot(aes(urban, value, color = name)) + 
-  geom_point() + 
-  geom_smooth(method = "lm") + 
-  facet_wrap(~name, ncol = 1) +
-  theme_bw()
-
-
-
 

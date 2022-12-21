@@ -11,6 +11,7 @@
 ## Load packages
 require(pacman)
 p_load(tidyverse, sf, cowplot, janitor,
+       nhdplusTools,
        ggpubr, #stat_compare_means()
        ggallin) #pseudolog10_trans()
 
@@ -27,16 +28,22 @@ common_crs = 4326
 watershed <- read_sf("data/gis/NHD_H_17030001_HU8_Shape/Shape/WBDHU4.shp") %>% 
   st_transform(common_crs)
 
-# Set up list of shapefiles to read in
-flowline_files <- c("data/gis/NHD_H_17030001_HU8_Shape/Shape/NHDFlowline.shp", 
-                    "data/gis/NHD_H_17030002_HU8_Shape/Shape/NHDFlowline.shp", 
-                    "data/gis/NHD_H_17030003_HU8_Shape/Shape/NHDFlowline.shp")
+# # Set up list of shapefiles to read in
+# flowline_files <- c("data/gis/NHD_H_17030001_HU8_Shape/Shape/NHDFlowline.shp", 
+#                     "data/gis/NHD_H_17030002_HU8_Shape/Shape/NHDFlowline.shp", 
+#                     "data/gis/NHD_H_17030003_HU8_Shape/Shape/NHDFlowline.shp")
+# 
+# # Create a single sf object for the multiple flowline files
+# flowlines <- map(flowline_files, read_sf) %>% 
+#   bind_rows() %>% #combine into one file
+#   st_transform(common_crs) %>% # set crs
+#   st_zm() %>% 
+#   filter(gnis_name == "Yakima River")
 
-# Create a single sf object for the multiple flowline files
-flowlines <- map(flowline_files, read_sf) %>% 
-  bind_rows() %>% #combine into one file
+## Read in flowlines using nhdplusTools
+flowlines <- get_nhdplus(AOI = watershed) %>% 
   st_transform(common_crs) %>% # set crs
-  st_zm() %>% 
+  st_zm() %>%
   filter(gnis_name == "Yakima River")
 
 
@@ -94,8 +101,7 @@ plot_grid(plot_map("d50_mm_a_usgs", "USGS"),
 ggsave("figures/4_figure4_maps.png", width = 10, height = 10)
 
 
-## Now, let's calculate the distance of each point from the Yakima and see how
-## that shakes out
+# 5. Make boxplots to compare above/below median to lat/long/distance ----------
 
 ## For-loop to find the minimum straight-line distance from the the Yakima 
 distances <- list(NA)
@@ -128,10 +134,5 @@ plot_grid(ggplot(df_distance, aes(x = divide_d50, distance_m)) +
             stat_compare_means(label = "p.format", label.x = 1.3, label.y = -119.8) + 
             labs(x = "d50 value", y = "Longitude"), 
           ncol = 1)
-ggsave("figures/S2_boxplots_for_Fig4.png", width = 8, height = 8)
-
-df_distance %>% 
-  filter(source == "d50_mm_yolo") %>% 
-  group_by(divide_d50) %>% 
-  summarize(median(distance_m))
+ggsave("figures/S3_boxplots_for_Fig4.png", width = 8, height = 8)
 

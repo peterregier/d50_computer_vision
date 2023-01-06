@@ -17,7 +17,7 @@ source("R scripts/0.5_create_master_data.R")
 ## Make figures
 source("R scripts/1_map_v2.R")
 source("R scripts/2_figure2_correlations.R")
-source("R scripts/3_figure3_compare_sources")
+source("R scripts/3_figure3_compare_sources.R")
 source("R scripts/4_figure4_comparison_maps.R")
 source("R scripts/5_figure5_correlation_matrix.R")
 source("R scripts/6_figure6_intra_site_variability.R")

@@ -47,7 +47,7 @@ site_info_edited <- site_info_raw %>%
   add_row(site_id = "U20", long = -120.642142, lat = 46.898654)
 
 ## Third, add YOLO estimates from file provided by YC on 7/28/22
-yolo <- read_csv("data/220728/d50/d50_Train1_Prediction1_40.csv") %>% 
+yolo <- read_csv("data/d50_Train1_Prediction1_40.csv") %>% 
   clean_names() %>% 
   rename("type" = yolo) %>% 
   separate(name, into = c("study", "site_id", "date", "id")) %>% 

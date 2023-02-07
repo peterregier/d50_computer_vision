@@ -28,18 +28,6 @@ common_crs = 4326
 watershed <- read_sf("data/gis/NHD_H_17030001_HU8_Shape/Shape/WBDHU4.shp") %>% 
   st_transform(common_crs)
 
-# # Set up list of shapefiles to read in
-# flowline_files <- c("data/gis/NHD_H_17030001_HU8_Shape/Shape/NHDFlowline.shp", 
-#                     "data/gis/NHD_H_17030002_HU8_Shape/Shape/NHDFlowline.shp", 
-#                     "data/gis/NHD_H_17030003_HU8_Shape/Shape/NHDFlowline.shp")
-# 
-# # Create a single sf object for the multiple flowline files
-# flowlines <- map(flowline_files, read_sf) %>% 
-#   bind_rows() %>% #combine into one file
-#   st_transform(common_crs) %>% # set crs
-#   st_zm() %>% 
-#   filter(gnis_name == "Yakima River")
-
 ## Read in flowlines using nhdplusTools
 flowlines <- get_nhdplus(AOI = watershed) %>% 
   st_transform(common_crs) %>% # set crs

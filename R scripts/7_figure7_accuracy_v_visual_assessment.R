@@ -20,7 +20,7 @@ theme_set(theme_bw())
 # 2. Import data ---------------------------------------------------------------
 
 ## This script uses older data that has accuracy. 
-yolo_visual <- read_csv("data/220728/d50/d50_Train1_Prediction1_40.csv") %>% 
+yolo_visual <- read_csv("data/d50_Train1_Prediction1_40.csv") %>% 
   clean_names() %>% 
   filter(folder == "yes" | folder == "maybe"| folder == "no") %>% 
   separate(name, into = c("study", "site", "date", "id")) %>% 

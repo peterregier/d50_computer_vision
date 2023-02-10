@@ -191,5 +191,6 @@ usgs_matched <- usgs_sites %>%
          rc_site = site_info$id[index]) %>% #add distances
   mutate(long = unlist(map(usgs_sites$geometry,1)),
          lat = unlist(map(usgs_sites$geometry,2))) %>% 
-  st_drop_geometry()
+  st_drop_geometry() %>% 
+  select(-index)
 write_csv(usgs_matched, "data/221114_usgs_d50_matched.csv")

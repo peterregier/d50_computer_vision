@@ -48,3 +48,20 @@ D50_mm_guta,mm,d50 es4timate based on Abeshu et al. 2022,D50_mm_guta,Column head
 COMID,N/A,Stream reach COMID,COMID,Column header,text,RC2_all_stream_Attributes_updated_VGC
 StreamOrde,order,Strahler stream order,StreamOrde,Column header,numeric,RC2_all_stream_Attributes_updated_VGC
 site_ID,N/A,Site ID,site_ID,Column header,text,RC2_all_stream_Attributes_updated_VGC
+COMID,N/A,Stream reach COMID,COMID,Column header,text,
+D50m_YOLO,mm,Median particle size determined by the YOLO model,d50_mm_yolo,Column header,numeric,
+SiteID,N/A,Site ID,site_ID,Column header,text,
+CAT_BASIN_AREA,km2,CAT_BASIN_AREA,Basin area - catchment scale,,,
+CAT_ELEV_MEAN,m,CAT_ELEV_MEAN,Mean elevation - catchment scale,,,
+CAT_STREAM_SLOPE,percent,CAT_STREAM_SLOPE,Mean stream slope - catchment scale,,,
+CAT_STREAM_LENGTH,km,CAT_STREAM_LENGTH,Stream length - catchment scale,,,
+TOT_BASIN_AREA,km2,TOT_BASIN_AREA,Basin area - basine scale,,,
+TOT_ELEV_MEAN,m,TOT_ELEV_MEAN,Mean elevation - basin scale,,,
+TOT_STREAM_SLOPE,,TOT_STREAM_SLOPE,Mean stream slope - basin scale,,,
+TOT_STREAM_LENGTH,km,TOT_STREAM_LENGTH,Stream length - basin scale,,,
+CAT_PET,mm/yr,CAT_PET,Potential evapotranspiration - catchment scale,,,
+TOT_PET,mm/yr,TOT_PET,Potential evapotranspiration - basin scale,,,
+urban,percent,urban,Precent urban land cover - catchment scale,,,
+turban,percent,turban,Percent urban land cover - basin scale,,,
+CAT_PRSNOW,percent,CAT_PRSNOW,Precipitation as snow - catchment scale,,,
+TOT_PRSNOW,percent,TOT_PRSNOW,Precipitation as snow - basin scale,,,

@@ -1,4 +1,4 @@
-name,YOLO,folder,label,photo width (pixel),photo height (pixel),resolution x(m/pixel),resolution y (m/pixel),width (m),heigth (m),long axis (m),YOLO box number,YOLO accuracy (%),area covered (%),YOLO threshold (%)
+name,YOLO,folder,label,photo_width_pixel,photo_height_pixel,resolution_x_m_pixel,resolution_y_m_pixel,width_m,height_m,long_axis_m,YOLO_box_number,YOLO_accuracy_percent,area_covered_percent,YOLO_threshold_percent
 PNNL_label.jpg,Train1,none,0,4032,3024,0.000218,0.000218,0.075864419,0.070195683,0.101781283,86,100,84.45982603,40
 SPS_S15_20210901_18_label.jpg,Train1,none,0,2024,1680,0.000395257,0.00047619,0.01021752,0.010714,0.01523065,419,100,87.70335307,40
 SPS_S18R_20210831_69_label.jpg,Train1,none,0,2090,1862,0.000382775,0.000429646,0.011237371,0.012856554,0.017773406,730,100,85.66596761,40

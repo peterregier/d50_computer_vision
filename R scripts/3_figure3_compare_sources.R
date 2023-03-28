@@ -87,7 +87,7 @@ relabeller <- function(variable,value){
   return(facet_names[value])
 }
 
-abeyshu_raw <- read_csv("data/abeyshu_fig1_digitized.csv")
+abeyshu_raw <- read_csv("data/abeshu_fig1_digitized.csv")
 
 df_histogram <- df_long %>% mutate(d50_mm_log2 = log2(d50_mm))
 

@@ -1,0 +1,64 @@
+Column_or_Row_Name,Unit,Definition,Term_Type,Data_Type
+site_no_usgs,N/A,USGS site number.,column_header,numeric
+nearest_feature,meter,Distance to nearest flowline.,column_header,numeric
+Column_or_Row_Name,N/A,Column or row headers from each csv file in the dataset.,column_header,text
+d50_mm_usgs,millimeter,Median particle size.,column_header,numeric
+distance_from_rc_m,meter,Distance from nearest river cooridor (RC) project's site.,column_header,numeric
+site_no,N/A,Nearest river cooridor (RC) project's site.,column_header,text
+COMID,N/A,Stream reach COMID. COMID is an identifier for catchment polycons used by NHDplus. ,column_header,text
+d50_mm_nexss,millimeter,Median particle size determined by the Networks with EXchange and Subsurface Storage (NEXSS) modell.,column_header,numeric
+D50_mm_nexss,millimeter,d50 estimate based on the Networks with EXchange and Subsurface Storage (NEXSS) model.,column_header,numeric
+type,N/A,Image used in YOLO model.,column_header,text
+folder,N/A,Manual categorization of image suitability.,column_header,text
+label,N/A,Integer representing manual categorization of image suitability.,column_header,text
+d50_mm_yolo,millimeter,Median particle size determined by the YOLO model.,column_header,numeric
+label,N/A,Manual categorization of image suitability.,column_header,text
+d50_mm_abeshu,millimeter,Median particle size determined by the model in Abeshu et al. (2022; doi:10.5194/essd-14-929-2022).,column_header,numeric
+d50_mm_log2,millimeter,Log2-transformed d50 value from figure 4 of Abeshu et al. (2022; doi:10.5194/essd-14-929-2022).,column_header,numeric
+count_raw,count,Count value from histogram bar in figure 4 of Abeshu et al. (2022; doi:10.5194/essd-14-929-2022).,column_header,numeric
+count,count,Count_raw normalized by dividing by a scaling factor to match scales between sample size in Abeshu et al. and the dataset used for this study.,column_header,numeric
+name,N/A,Filenames of images modeled with YOLO.,column_header,text
+YOLO,N/A,Image category: modeling; training; or prediction,column_header,text
+lat,decimal_degrees_WGS84,USGS site latitude.,column_header,numeric
+lat,decimal_degrees_WGS84,River cooridor (RC) project's site latitude.,column_header,numeric
+photo_width_pixel,pixel,Image horizontal pixel count.,column_header,numeric
+photo_height_pixel,pixel,Image vertical pixel count.,column_header,numeric
+resolution_x_m_pixel,meters_per_pixel,Image horizontal resolution.,column_header,numeric
+resolution_y_m_pixel,meters_per_pixel,Image vertical resolution.,column_header,numeric
+width_m,meter,d50 based on particle widths.,column_header,numeric
+height_m,meter,d50 based on particle heights.,column_header,numeric
+long_axis_m,meter,d50 based on longest particle axis.,column_header,numeric
+YOLO_box_number,count,Number of particles identified.,column_header,numeric
+YOLO_accuracy_percent,percent,Internal accuracy metric.,column_header,numeric
+area_covered_percent,percent,Area of image covered by identified particles.,column_header,numeric
+YOLO_threshold_percent,percent,Internal model classification threshold,column_header,numeric
+logSlope,meters per meter,Log-transformed reach slope.,column_header,numeric
+long,decimal_degrees_WGS84,River cooridor (RC) project's site longitude.,column_header,numeric
+site_id,N/A,River cooridor (RC) project's site ID.,column_header,text
+D50_mm_guta,millimeter,d50 estimate based on model in Abeshu et al. (2022; doi:10.5194/essd-14-929-2022).,column_header,numeric
+stream_order,order,Strahler stream order.,column_header,numeric
+CAT_BASIN_AREA,killometers_squared,Basin area; catchment scale.,column_header,numeric
+CAT_ELEV_MEAN,meter,Mean elevation; catchment scale.,column_header,numeric
+CAT_STREAM_SLOPE,percent,Mean stream slope; catchment scale.,column_header,numeric
+CAT_STREAM_LENGTH,killometers,Stream length; catchment scale.,column_header,numeric
+TOT_BASIN_AREA,killometers_squared,Basin area; basin scale.,column_header,numeric
+TOT_ELEV_MEAN,meter,Mean elevation; basin scale.,column_header,numeric
+TOT_STREAM_SLOPE,percent,Mean stream slope; basin scale.,column_header,numeric
+TOT_STREAM_LENGTH,killometers,Stream length; basin scale.,column_header,numeric
+CAT_PET,millimeters_per_year,Potential evapotranspiration; catchment scale.,column_header,numeric
+TOT_PET,millimeters_per_year,Potential evapotranspiration; basin scale.,column_header,numeric
+urban,percent,Precent urban land cover; catchment scale.,column_header,numeric
+turban,percent,Percent urban land cover; basin scale.,column_header,numeric
+CAT_PRSNOW,percent,Precipitation as snow; catchment scale.,column_header,numeric
+TOT_PRSNOW,percent,Precipitation as snow; basin scale.,column_header,numeric
+Data_Type,N/A,Type of data (numeric; text; date; time; datetime).,column_header,text
+Definition,N/A,Description of the information in a given column or row in the dataset.,column_header,text
+Term_Type,N/A,Indicates whether the header is a column header or row header.,column_header,text
+Unit,N/A,Unit of measurement that applies to a given column or row in the data package.,column_header,text
+End_Date,YYYY-MM-DD,The latest date in the file.,column_header,date
+File_Description,N/A,A brief description of the files in the data package.,column_header,text
+File_Name,N/A,Name of files in the data package.,column_header,text
+File_Path,N/A,File path within the data package.,column_header,text
+Missing_Value_Codes,N/A,Missing value codes.,column_header,text
+Standard,N/A,ESS-DIVE Reporting Format or other standard applied to the data file.,column_header,text
+Start_Date,YYYY-MM-DD,The earliest date in the file.,column_header,date

@@ -42,3 +42,6 @@ vignettes/*.pdf
 .DS_Store
 
 230207_data_backup/
+
+*ess_dive*
+*ess-dive*

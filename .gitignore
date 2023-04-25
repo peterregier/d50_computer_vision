@@ -43,6 +43,5 @@ vignettes/*.pdf
 
 230207_data_backup/
 
-ess-dive/*
-
-ess-dive/Regier_readme_datapackage_template.docx
+*ess_dive*
+*ess-dive*

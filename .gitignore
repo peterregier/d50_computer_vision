@@ -45,3 +45,7 @@ vignettes/*.pdf
 ignore/
 
 writing/
+
+ess-dive/
+
+ess_dive_data_repo/

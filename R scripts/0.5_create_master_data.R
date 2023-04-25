@@ -20,7 +20,7 @@ p_load(tidyverse)
 # 2. Import raw datasets -------------------------------------------------------
 
 ## This spreadsheet provided from VGC via teams on 11/9/22 in chat with JS/YC
-stream_order_raw <- read_csv("data/RC2_all_stream_Attributes_updated_VGC.csv") %>% 
+stream_order_raw <- read_csv("data/RC2_all_stream_Attributes_updated.csv") %>% 
   clean_names() %>% 
   rename("stream_order" = stream_orde) %>% 
   select(stream_order, site_id)

@@ -4,7 +4,6 @@
 
 # Session Data files
 .RData
-ignore/
 
 # User-specific files
 .Ruserdata
@@ -43,5 +42,6 @@ vignettes/*.pdf
 
 230207_data_backup/
 
-*ess_dive*
-*ess-dive*
+ignore/
+
+writing/

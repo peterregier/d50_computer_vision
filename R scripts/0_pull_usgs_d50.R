@@ -157,8 +157,8 @@ ggplot() +
 ## Load sites from VGC spreadsheet
 site_info <- read_csv("data/RC2 Spatial Study_Responses_Form Responses 1_updated 2022-02-01.csv") %>% 
   clean_names() %>% 
-  select(id, longitude_dd, latitude_dd) %>% 
-  st_as_sf(coords = c("longitude_dd", "latitude_dd"), crs = common_crs)
+  select(id, lat, long) %>% 
+  st_as_sf(coords = c("long", "lat"), crs = common_crs)
 
 ## Quick visualization of producs together
 ggplot() + 

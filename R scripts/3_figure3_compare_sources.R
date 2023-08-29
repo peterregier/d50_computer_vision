@@ -52,8 +52,9 @@ df_long_raw <- df_bin %>%
 
 ## Finally, join with USGS
 usgs_raw <- read_csv("data/221114_usgs_d50_matched.csv") %>% 
-  mutate(source = "d50_mm_a_usgs", 
+  mutate(source = "d50_mm_usgs", 
          site_id = as.character(site_no)) %>% 
+  rename("d50_mm" = d50_mm_usgs) %>% 
   select(site_id, stream_order, source, d50_mm)
 
 df_long <- bind_rows(df_long_raw, usgs_raw)
@@ -77,7 +78,7 @@ df_long %>% group_by(source) %>% summarize(mean(d50_mm),
 
 ## First, set up some stuff (a list and function) to relabel facets
 facet_names <- list(
-  'd50_mm_a_usgs' = "USGS", 
+  'd50_mm_usgs' = "USGS", 
   'd50_mm_abeshu' = "Abeshu",
   'd50_mm_nexss' = "NEXSS", 
   'd50_mm_yolo' = "YOLO"
@@ -87,17 +88,18 @@ relabeller <- function(variable,value){
   return(facet_names[value])
 }
 
-abeyshu_raw <- read_csv("data/abeshu_fig1_digitized.csv")
+abeshu_raw <- read_csv("data/abeshu_fig1_digitized.csv")
 
 df_histogram <- df_long %>% mutate(d50_mm_log2 = log2(d50_mm))
 
 panel_b <- ggplot() + 
-  geom_col(data = abeyshu_raw, aes(d50_mm_log2, count), alpha = 0.5) + 
+  geom_col(data = abeshu_raw, aes(d50_mm_log2, count), alpha = 0.5) + 
   geom_histogram(data = df_histogram, aes(d50_mm_log2, fill = source), 
                  color = "black", alpha = 0.5, show.legend = F) + 
   scale_fill_manual(values = method_color_scheme) +
   facet_wrap(~source, ncol = 1, labeller = relabeller) +
   labs(x = "log2 d50", fill = "")
+ggsave("figures/230523_density_plots.png", width = 3, height = 6)
 
 
 # 6. Create stream-order -------------------------------------------------------

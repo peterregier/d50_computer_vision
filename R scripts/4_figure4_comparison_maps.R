@@ -34,6 +34,11 @@ flowlines <- get_nhdplus(AOI = watershed) %>%
   st_zm() %>%
   filter(gnis_name == "Yakima River")
 
+flowlines_satus <- get_nhdplus(AOI = watershed) %>% 
+  st_transform(common_crs) %>% # set crs
+  st_zm() %>%
+  filter(grepl("Satus", gnis_name))
+
 
 # 3. Assemble data and convert to sf -------------------------------------------
 
@@ -71,6 +76,7 @@ plot_map <- function(d50_name, title){
   ggplot() + 
     geom_sf(data = watershed) +
     geom_sf(data = flowlines, color = "blue") +
+    geom_sf(data = flowlines_satus, color = "lightblue") +
     geom_sf(data = x, 
             aes(color = divide_d50), size = 4, alpha = 0.8) + 
     labs(color = "d50 (mm)", title = title, shape = "") + 

@@ -61,7 +61,7 @@ df_bin_comid <- df_bin %>%
 ## 24128685: this matches to site_id S75
 ## 24423347: this matches to site_id W20
 ## These aren't a problem since we can match by site on the new datset
-variables_raw <- read_csv("data/correlations/nhd_yrb_D50_variable_updated.csv") %>% 
+variables_raw <- read_csv("data/nhd_yrb_D50_variable_updated.csv") %>% 
   clean_names() %>% 
   select(-contains("d50")) %>% 
   group_by(site_id) %>% 
@@ -135,7 +135,7 @@ make_boxplot <- function(var){
     xlab("Stream order")
 }
 
-plot_grid(make_boxplot(cat_basin_slope) + ylab("Slope (%)"), 
+plot_grid(make_boxplot(cat_stream_slope) + ylab("Slope (%)"), 
           make_boxplot(cat_elev_mean) + ylab("Elevation (m)"), ncol = 1)
 ggsave("figures/S2_characteristics_by_streamorder.png", width = 5, height = 4)
 

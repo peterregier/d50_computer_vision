@@ -52,9 +52,9 @@ df_long_raw <- df_bin %>%
 
 ## Finally, join with USGS
 usgs_raw <- read_csv("data/221114_usgs_d50_matched.csv") %>% 
-  mutate(source = "d50_mm_usgs", 
+  #rename("d50_mm" = d50_mm_usgs) %>% 
+  mutate(source = "d50_mm", 
          site_id = as.character(site_no)) %>% 
-  rename("d50_mm" = d50_mm_usgs) %>% 
   select(site_id, stream_order, source, d50_mm)
 
 df_long <- bind_rows(df_long_raw, usgs_raw)

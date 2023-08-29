@@ -22,7 +22,7 @@ p_load(tidyverse)
 ## This spreadsheet provided from VGC via teams on 11/9/22 in chat with JS/YC
 stream_order_raw <- read_csv("data/RC2_all_stream_Attributes_updated.csv") %>% 
   clean_names() %>% 
-  rename("stream_order" = stream_orde) %>% 
+  #rename("stream_order" = stream_orde) %>% 
   select(stream_order, site_id)
 
 ## This spreadsheet is missing two sites (W20 and U20), which are manually added.
@@ -35,15 +35,13 @@ stream_order_edited <- stream_order_raw %>%
 ## Second, import lat-longs from a file also provided by VGC (same chat)
 site_info_raw <- read_csv("data/RC2 Spatial Study_Responses_Form Responses 1_updated 2022-02-01.csv") %>% 
   clean_names() %>% 
-  rename("site_id" = id, 
-         "long" = longitude_dd, 
-         "lat" = latitude_dd) %>% 
+  rename("site_id" = id) %>% 
   select(site_id, long, lat) 
 
 ## This also is missing W20 and U20, lat-longs are manually added from spreadsheet: 
 ## https://pnnl.sharepoint.com/:x:/r/teams/RC-3RiverCorridorSFA/_layouts/15/Doc.aspx?sourcedoc=%7BF6515F21-CAA3-463A-B89E-119DEF7CC6D5%7D&file=RC3_All_Site_Details_and_Permit_Status.xlsx&action=default&mobileredirect=true
 site_info_edited <- site_info_raw %>% 
-  add_row(site_id = "W20", long = -121.297724, lat = 46.648074)  %>% 
+  add_row(site_id = "W20", long = -120.710935, lat = 46.832844)  %>% 
   add_row(site_id = "U20", long = -120.642142, lat = 46.898654)
 
 ## Third, add YOLO estimates from file provided by YC on 7/28/22

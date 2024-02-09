@@ -36,7 +36,8 @@ b = round(summary(lm(test ~ train, data = df_d50))[[4]][1, 1], 2)
 fit_line = paste0("y = ", m, "x + ", b)
 
 ## Calculate metrics to assess model performance
-r2 = hydroGOF::gof(df_d50$train, df_d50$test)["R2", ]
+#r2 = hydroGOF::gof(df_d50$train, df_d50$test)["R2", ]
+r2 = round(summary(lm(test~train, df_d50))[[9]], 2)
 r2_formatted = paste("R^2 == ", r2)
 rmse = round((hydroGOF::rmse(df_d50$train, df_d50$test) / mean(df_d50$train)) * 100, 1) 
 
@@ -45,7 +46,7 @@ p_all <- ggplot(df_d50, aes(train, test)) +
   geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
   geom_smooth(method = "lm", se = F) +
   geom_point() + 
-  labs(title = "Full-image d50", x = "d50 (Train, mm)", y = "d50 (Test, mm)") +
+  labs(title = "Full-image d50", x = "Manual d50 (mm)", y = "YOLO d50 (mm)") +
   annotate("text", x = 20, y = 42, label = fit_line) + 
   annotate("text", x = 20, y = 42 * 0.95, label = r2_formatted, parse=TRUE) + 
   annotate("text", x = 20, y = 42 * 0.9, label = paste0("RMSE = ", rmse, "%")) + 
@@ -119,7 +120,8 @@ b1 = round(summary(lm(d50_test ~ d50_train, data = df_binned))[[4]][1, 1], 2)
 fit_line_bin = paste0("y = ", m1, "x + ", b1)
 
 ## Calculate metrics to assess model performance
-r2_bin = hydroGOF::gof(df_binned$d50_train, df_binned$d50_test)["R2", ]
+#r2_bin = hydroGOF::gof(df_binned$d50_train, df_binned$d50_test)["R2", ]
+r2_bin = round(summary(lm(d50_test~d50_train, df_binned))[[9]], 2)
 r2_bin_formatted = paste("R^2 == ", r2_bin)
 rmse_bin = round((hydroGOF::rmse(df_binned$d50_train, df_binned$d50_test) / mean(df_binned$d50_train)) * 100, 1) 
 
@@ -129,8 +131,8 @@ p_subset <- ggplot(df_binned, aes(d50_train, d50_test)) +
   geom_smooth(method = "lm", se = F) +
   geom_point() + 
   labs(title = "Subsetted image median grain size", 
-       x = "d50 (Train, mm)", 
-       y = "d50 (Test, mm)") + 
+       x = "Manual d50 (mm)", 
+       y = "YOLO d50 (mm)") + 
   scale_color_viridis_c() + 
   annotate("text", x = 20, y = 50, label = fit_line_bin) + 
   annotate("text", x = 20, y = 50 * 0.95, label = r2_bin_formatted, parse = TRUE) + 
@@ -152,7 +154,9 @@ ggplot(df_binned_raw, aes(d50_train, d50_test)) +
   geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
   geom_smooth(method = "lm", se = F) +
   geom_point() + 
-  labs(title = "Subsetted image median grain size", x = "Median grain size (Train, mm)", y = "Median grain size (Test, mm)") + 
+  labs(title = "Subsetted image median grain size", 
+       x = "Manual d50 (mm)", 
+       y = "YOLO d50 (mm)") + 
   scale_color_viridis_c() + 
   annotate("text", x = 20, y = 50, label = "n = 40") + 
   theme(plot.title = element_text(hjust = 0.5))

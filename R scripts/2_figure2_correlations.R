@@ -128,7 +128,9 @@ p_subset <- ggplot(df_binned, aes(d50_train, d50_test)) +
   geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
   geom_smooth(method = "lm", se = F) +
   geom_point() + 
-  labs(title = "Subsetted image median grain size", x = "Median grain size (Train, mm)", y = "Median grain size (Test, mm)") + 
+  labs(title = "Subsetted image median grain size", 
+       x = "d50 (Train, mm)", 
+       y = "d50 (Test, mm)") + 
   scale_color_viridis_c() + 
   annotate("text", x = 20, y = 50, label = fit_line_bin) + 
   annotate("text", x = 20, y = 50 * 0.95, label = r2_bin_formatted, parse = TRUE) + 

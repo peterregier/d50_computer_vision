@@ -78,7 +78,7 @@ df_long %>% group_by(source) %>% summarize(mean(d50_mm),
 
 ## First, set up some stuff (a list and function) to relabel facets
 facet_names <- list(
-  'd50_mm_usgs' = "USGS", 
+  'd50_mm' = "USGS", 
   'd50_mm_abeshu' = "Abeshu",
   'd50_mm_nexss' = "NEXSS", 
   'd50_mm_yolo' = "YOLO"
@@ -116,4 +116,15 @@ panel_c <- ggplot(df_long, aes(as.factor(stream_order), d50_mm)) +
 plot_grid(panel_a, panel_b, panel_c, 
           rel_widths = c(0.75, 1, 1), nrow = 1, labels = c("A", "B", "C"))
 ggsave("figures/3_figure3.png", width = 9, height = 6)
+
+
+# 8. Make supplemental figure --------------------------------------------------
+
+ggplot(df_long, aes(as.factor(stream_order), d50_mm)) + 
+  geom_boxplot(aes(fill = as.factor(stream_order)), width = 0.5, show.legend = F) + 
+  facet_wrap(~source, ncol = 1, labeller = relabeller) + 
+  scale_fill_viridis_d() + 
+  labs(x = "Strahler Stream Order", y = "d50 (mm)")
+ggsave("figures/SA_Figure_3C.png", width = 3.5, height = 6)
+
 

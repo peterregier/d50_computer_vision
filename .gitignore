@@ -44,6 +44,8 @@ vignettes/*.pdf
 
 ignore/
 
+archive/
+
 writing/
 
 ess-dive/

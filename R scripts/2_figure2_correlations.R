@@ -3,7 +3,7 @@
 ## In the updated version, an additional panel is created that compares a 2x2 
 ## grid subsetting each image into 4 to increase n to 40
 ##
-## 2022-08-16 (Updated 2024-02-13 based on convo with YC)
+## 2022-08-16 (Updated 2022-11-16)
 ## Peter Regier
 ##
 # ########### #
@@ -57,7 +57,7 @@ p_all <- ggplot(df_d50, aes(train, test)) +
 # 3. Create Panel B: subset comparison -----------------------------------------
 
 ## Set the column names provided by YC
-dat_colnames <- c("class", "x", "y", "width", "height", "prob", "long_axis", "real_size_maybe")
+dat_colnames <- c("class", "x", "y", "width", "height", "prob", "long_axis")
 
 ## Set up functions to read in data
 read_dat <- function(path){

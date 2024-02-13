@@ -3,7 +3,7 @@
 ## In the updated version, an additional panel is created that compares a 2x2 
 ## grid subsetting each image into 4 to increase n to 40
 ##
-## 2022-08-16 (Updated 2022-11-16)
+## 2022-08-16 (Updated 2024-02-13 after convo with YC)
 ## Peter Regier
 ##
 # ########### #
@@ -21,43 +21,46 @@ theme_set(theme_bw())
 
 # 2. Create Panel A: d50 comparison --------------------------------------------
 
-df_d50 <- read_csv("data/221115_rc2_master.csv") %>%
-  filter(label == 0 | label == 4) %>% 
-  mutate(label = case_when(label == 0 ~ "train",
-                           label == 4 ~ "test")) %>% 
-  select(label, d50_mm_yolo) %>% 
-  pivot_wider(names_from = "label", 
+df_d50 <- read_csv("data/d50_TrainNone_ValidNone_Test1_Predict5x_40.csv") %>%
+  clean_names() %>% 
+  select(type, d50_count_meter) %>% 
+  mutate(d50_mm_yolo = d50_count_meter * 1000) %>% 
+  select(-d50_count_meter) %>% 
+  pivot_wider(names_from = "type",
               values_from = "d50_mm_yolo") %>% 
   unnest()
 
 ## Fit for actual v estimated d50
-m = round(summary(lm(test ~ train, data = df_d50))[[4]][2, 1], 2)
-b = round(summary(lm(test ~ train, data = df_d50))[[4]][1, 1], 2)
+m = round(summary(lm(prediction ~ groundtruth, data = df_d50))[[4]][2, 1], 2)
+b = round(summary(lm(prediction ~ groundtruth, data = df_d50))[[4]][1, 1], 2)
 fit_line = paste0("y = ", m, "x + ", b)
 
 ## Calculate metrics to assess model performance
-#r2 = hydroGOF::gof(df_d50$train, df_d50$test)["R2", ]
-r2 = round(summary(lm(test~train, df_d50))[[9]], 2)
-r2_formatted = paste("R^2 == ", r2)
-rmse = round((hydroGOF::rmse(df_d50$train, df_d50$test) / mean(df_d50$train)) * 100, 1) 
+nse = round(hydroGOF::NSE(df_d50$groundtruth, df_d50$prediction), 2)
+r2_gof = hydroGOF::gof(df_d50$groundtruth, df_d50$prediction)["R2", ]
+r2 = round(summary(lm(prediction~groundtruth, df_d50))[[9]], 2)
+nse_formatted = paste("NSE = ", nse)
+r2_formatted = paste("R^2 == ", r2_gof)
+rmse = round((hydroGOF::rmse(df_d50$groundtruth, df_d50$prediction) / mean(df_d50$groundtruth)) * 100, 1) 
 
 
-p_all <- ggplot(df_d50, aes(train, test)) + 
+p_all <- ggplot(df_d50, aes(groundtruth, prediction)) + 
   geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
   geom_smooth(method = "lm", se = F) +
-  geom_point() + 
+  geom_point(size = 2, alpha = 0.9) + 
   labs(title = "Full-image d50", x = "Manual d50 (mm)", y = "YOLO d50 (mm)") +
   annotate("text", x = 20, y = 42, label = fit_line) + 
-  annotate("text", x = 20, y = 42 * 0.95, label = r2_formatted, parse=TRUE) + 
+  #annotate("text", x = 20, y = 42 * 0.95, label = r2_formatted, parse=TRUE) + 
+  annotate("text", x = 20, y = 42 * 0.95, label = nse_formatted) + 
   annotate("text", x = 20, y = 42 * 0.9, label = paste0("RMSE = ", rmse, "%")) + 
-  annotate("text", x = 20, y = 42 * 0.85, label = "n = 10") + 
+  annotate("text", x = 20, y = 42 * 0.85, label = "n = 9") + 
   theme(plot.title = element_text(hjust = 0.5))
-
+ggsave("figures/2_Figure2_a_only.png", width = 4, height = 4)
 
 # 3. Create Panel B: subset comparison -----------------------------------------
 
 ## Set the column names provided by YC
-dat_colnames <- c("class", "x", "y", "width", "height", "prob", "long_axis")
+dat_colnames <- c("class", "x", "y", "width", "height", "prob", "long_axis", "stuff")
 
 ## Set up functions to read in data
 read_dat <- function(path){
@@ -84,8 +87,8 @@ process_data <- function(data){
 data_path <- "data/TrainTest_IndividualGrains/"
 
 ## Read in specific files for test and train images
-train_files <- list.files(paste0(data_path, "Train"), full.names = T)
-test_files <- list.files(paste0(data_path, "Test"), full.names = T)
+train_files <- list.files(paste0(data_path, "Groundtruth"), full.names = T)
+test_files <- list.files(paste0(data_path, "Prediction_5x"), full.names = T)
 
 ## Create a test dataset
 test_df <- test_files[!grepl("PNNL", test_files)] %>% 

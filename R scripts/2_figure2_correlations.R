@@ -36,8 +36,8 @@ b = round(summary(lm(prediction ~ groundtruth, data = df_d50))[[4]][1, 1], 2)
 fit_line = paste0("y = ", m, "x + ", b)
 
 ## Calculate metrics to assess model performance
-nse = round(hydroGOF::NSE(df_d50$groundtruth, df_d50$prediction), 2)
-nse = round(hydroGOF::NSE(df_d50$prediction, df_d50$groundtruth), 2)
+#nse = round(hydroGOF::NSE(df_d50$groundtruth, df_d50$prediction), 2) #0.64, wrong order!!!
+nse = round(hydroGOF::NSE(df_d50$prediction, df_d50$groundtruth), 2) #0.82 - corrected per convo w YC
 r2_gof = hydroGOF::gof(df_d50$groundtruth, df_d50$prediction)["R2", ]
 r2 = round(summary(lm(prediction~groundtruth, df_d50))[[9]], 2)
 nse_formatted = paste("NSE = ", nse)

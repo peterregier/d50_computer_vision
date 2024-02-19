@@ -116,7 +116,7 @@ panel_c <- ggplot(df_long, aes(as.factor(stream_order), d50_mm)) +
 plot_grid(panel_a, panel_b, panel_c, 
           rel_widths = c(0.75, 1, 1), nrow = 1, labels = c("A", "B", "C"))
 ggsave("figures/3_figure3.png", width = 9, height = 6)
-
+ggsave("figures/3_Figure3.pdf", width = 9, height = 6)
 
 # 8. Make supplemental figure --------------------------------------------------
 

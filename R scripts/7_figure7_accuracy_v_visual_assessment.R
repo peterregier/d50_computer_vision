@@ -39,7 +39,7 @@ ggplot(yolo_visual, aes(fct_reorder(folder, yolo_accuracy_percent), yolo_accurac
   geom_rect(xmin = 2.8, xmax = 3.2, ymin = 48, ymax = 53, fill = NA, color = "red") + 
   labs(title = "Visual assessment", x = "Image suitability", y = "YOLO accuracy (%)")
 ggsave("figures/7_accuracy_v_visual_assessment.png", width = 3, height = 3)
-
+ggsave("figures/7_accuracy_v_visual_assessment.pdf", width = 3, height = 3)
 
 ## For stats in paper: 
 compare_means(yolo_accuracy_percent ~ folder, data = yolo_visual)

@@ -37,6 +37,7 @@ fit_line = paste0("y = ", m, "x + ", b)
 
 ## Calculate metrics to assess model performance
 nse = round(hydroGOF::NSE(df_d50$groundtruth, df_d50$prediction), 2)
+nse = round(hydroGOF::NSE(df_d50$prediction, df_d50$groundtruth), 2)
 r2_gof = hydroGOF::gof(df_d50$groundtruth, df_d50$prediction)["R2", ]
 r2 = round(summary(lm(prediction~groundtruth, df_d50))[[9]], 2)
 nse_formatted = paste("NSE = ", nse)
@@ -56,6 +57,7 @@ p_all <- ggplot(df_d50, aes(groundtruth, prediction)) +
   annotate("text", x = 20, y = 42 * 1, label = "n = 9") + 
   theme(plot.title = element_text(hjust = 0.5))
 ggsave("figures/2_Figure2_a_only.png", width = 4, height = 4)
+ggsave("figures/2_Figure2_a_only.pdf", width = 4, height = 4)
 
 # 3. Create Panel B: subset comparison -----------------------------------------
 

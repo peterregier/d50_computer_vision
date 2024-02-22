@@ -13,7 +13,7 @@
 
 ## Load packages
 require(pacman)
-p_load(tidyverse, cowplot, janitor, purrr, hydroGOF)
+p_load(tidyverse, cowplot, janitor, purrr, hydroGOF, segmented)
 
 ## Set ggplot theme
 theme_set(theme_bw())
@@ -23,9 +23,9 @@ theme_set(theme_bw())
 
 df_d50 <- read_csv("data/d50_TrainNone_ValidNone_Test1_Predict5x_40.csv") %>%
   clean_names() %>% 
-  select(type, d50_count_meter) %>% 
+  dplyr::select(type, d50_count_meter) %>% 
   mutate(d50_mm_yolo = d50_count_meter * 1000) %>% 
-  select(-d50_count_meter) %>% 
+  dplyr::select(-d50_count_meter) %>% 
   pivot_wider(names_from = "type",
               values_from = "d50_mm_yolo") %>% 
   unnest()
@@ -38,11 +38,11 @@ fit_line = paste0("y = ", m, "x + ", b)
 ## Calculate metrics to assess model performance
 #nse = round(hydroGOF::NSE(df_d50$groundtruth, df_d50$prediction), 2) #0.64, wrong order!!!
 nse = round(hydroGOF::NSE(df_d50$prediction, df_d50$groundtruth), 2) #0.82 - corrected per convo w YC
-r2_gof = hydroGOF::gof(df_d50$groundtruth, df_d50$prediction)["R2", ]
+r2_gof = hydroGOF::gof(df_d50$prediction, df_d50$groundtruth)["R2", ]
 r2 = round(summary(lm(prediction~groundtruth, df_d50))[[9]], 2)
 nse_formatted = paste("NSE = ", nse)
 r2_formatted = paste("R^2 == ", r2_gof)
-rmse = round((hydroGOF::rmse(df_d50$groundtruth, df_d50$prediction) / mean(df_d50$groundtruth)) * 100, 1) 
+rmse = round((hydroGOF::rmse(df_d50$prediction, df_d50$groundtruth) / mean(df_d50$groundtruth)) * 100, 1) 
 
 
 p_all <- ggplot(df_d50, aes(groundtruth, prediction)) + 

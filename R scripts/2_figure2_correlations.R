@@ -49,13 +49,13 @@ p_all <- ggplot(df_d50, aes(groundtruth, prediction)) +
   geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
   geom_smooth(method = "lm", se = F) +
   geom_point(size = 2, alpha = 0.9) + 
-  labs(title = "Full-image d50", x = "Measured d50 (mm)", y = "Modeled d50 (mm)") +
+  labs(x = "Measured d50 (mm)", y = "Modeled d50 (mm)") +
   annotate("text", x = 20, y = 42 * 1.3, label = fit_line) + 
   #annotate("text", x = 20, y = 42 * 0.95, label = r2_formatted, parse=TRUE) + 
   annotate("text", x = 20, y = 42 * 1.2, label = nse_formatted) + 
   annotate("text", x = 20, y = 42 * 1.1, label = paste0("RMSE = ", rmse, "%")) + 
-  annotate("text", x = 20, y = 42 * 1, label = "n = 9") + 
-  theme(plot.title = element_text(hjust = 0.5))
+  annotate("text", x = 20, y = 42 * 1, label = "n = 9")# + 
+  #theme(plot.title = element_text(hjust = 0.5))
 ggsave("figures/2_Figure2_a_only.png", width = 4, height = 4)
 ggsave("figures/2_Figure2_a_only.pdf", width = 4, height = 4)
 

@@ -94,6 +94,8 @@ plot_grid(plot_map("d50_mm_a_usgs", "USGS"),
           nrow = 2, labels = c("A", "B", "C", "D"))
 ggsave("figures/4_figure4_maps.png", width = 10, height = 10)
 ggsave("figures/4_figure4_maps.pdf", width = 10, height = 10)
+ggsave("figures/jpg/4_figure4_maps.jpg", width = 10, height = 10)
+
 
 # 5. Make boxplots to compare above/below median to lat/long/distance ----------
 

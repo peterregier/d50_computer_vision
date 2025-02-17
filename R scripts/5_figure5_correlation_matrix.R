@@ -123,6 +123,7 @@ plot_grid(make_corrplot(corr_basin, "Basin-scale correlations"),
           nrow = 1, labels = c("A", "B"))
 ggsave("figures/5_Figure5_correlations.png", width = 12, height = 6)
 ggsave("figures/5_Figure5_correlations.pdf", width = 12, height = 6)
+ggsave("figures/jpg/5_Figure5_correlations.jpg", width = 12, height = 6)
 
 
 # 5. Supplemental boxplots -----------------------------------------------------

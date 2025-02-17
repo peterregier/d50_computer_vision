@@ -55,7 +55,7 @@ usgs_raw <- read_csv("data/221114_usgs_d50_matched.csv") %>%
   #rename("d50_mm" = d50_mm_usgs) %>% 
   mutate(source = "d50_mm", 
          site_id = as.character(site_no)) %>% 
-  select(site_id, stream_order, source, d50_mm)
+  dplyr::select(site_id, stream_order, source, d50_mm)
 
 df_long <- bind_rows(df_long_raw, usgs_raw)
 
@@ -117,6 +117,7 @@ plot_grid(panel_a, panel_b, panel_c,
           rel_widths = c(0.75, 1, 1), nrow = 1, labels = c("A", "B", "C"))
 ggsave("figures/3_figure3.png", width = 9, height = 6)
 ggsave("figures/3_Figure3.pdf", width = 9, height = 6)
+ggsave("figures/jpg/3_Figure3.jpg", width = 9, height = 6)
 
 # 8. Make supplemental figure --------------------------------------------------
 

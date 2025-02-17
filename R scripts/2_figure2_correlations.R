@@ -58,6 +58,7 @@ p_all <- ggplot(df_d50, aes(groundtruth, prediction)) +
   #theme(plot.title = element_text(hjust = 0.5))
 ggsave("figures/2_Figure2_a_only.png", width = 4, height = 4)
 ggsave("figures/2_Figure2_a_only.pdf", width = 4, height = 4)
+ggsave("figures/jpg/2_Figure2_a_only.jpg", width = 4, height = 4)
 
 # 3. Create Panel B: subset comparison -----------------------------------------
 

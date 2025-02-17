@@ -110,4 +110,5 @@ p2 <- ggplot(df_stats, aes(site, sd / mean)) +
 plot_grid(p1, p2, rel_heights = c(1, 0.5), ncol = 1, align = "hv", labels = c("A", "B"))
 ggsave("figures/6_intra_site_variability.png", width = 6, height = 5)
 ggsave("figures/6_intra_site_variability.pdf", width = 6, height = 5)
+ggsave("figures/jpg/6_intra_site_variability.jpg", width = 6, height = 5)
 

@@ -45,13 +45,19 @@ site_info_edited <- site_info_raw %>%
   add_row(site_id = "U20", long = -120.642142, lat = 46.898654)
 
 ## Third, add YOLO estimates from file provided by YC on 7/28/22
-yolo <- read_csv("data/d50_Train1_Prediction1_40.csv") %>% 
+yolo <- #read_csv("data/d50_Train1_Prediction1_40.csv") %>% 
+  read_csv("data/d50_TrainNone_ValidNone_TestNone_Predict3b_35.csv") %>% 
   clean_names() %>% 
-  rename("type" = yolo) %>% 
+  mutate(type = "yolo") %>% 
   separate(name, into = c("study", "site_id", "date", "id")) %>% 
   filter(site_id != "label") %>% 
-  mutate(d50_mm_yolo = long_axis_m * 1000) %>% 
-  select(site_id, type, folder, label, d50_mm_yolo)
+  mutate(d50_mm_yolo = d50_area_meter * 1000) %>% 
+  dplyr::select(site_id, type, folder, label, d50_mm_yolo) %>% 
+  unique()
+
+yolo %>% 
+  dplyr::select(site_id, d50_mm_yolo) %>% 
+  unique()
 
 ## Fourth, add NEXSS and Abeshu estimates provided by KS
 nexss_abeshu <- read_csv("data/RC2_all_D50.csv") %>% 
@@ -69,8 +75,48 @@ df <- inner_join(stream_order_edited, site_info_edited) %>%
 ## Double-check that the 40 sites present in the YOLO dataset are all present
 unique(df$site_id)
 
-write_csv(df, "data/221115_rc2_master.csv")
+#write_csv(df, "data/221115_rc2_master.csv")
+write_csv(df, "data/250314_rc2_master.csv")
 
+
+yolo_stats <- read_csv("data/d50_TrainNone_ValidNone_TestNone_Predict3b_35.csv") %>% 
+  clean_names()
+  
+## What is the resolution of images in mm/pixel
+yolo_stats %>% 
+  summarize(min(l1l2_res_millimeter_per_pixel), 
+            mean(l1l2_res_millimeter_per_pixel), 
+            median(l1l2_res_millimeter_per_pixel), 
+            max(l1l2_res_millimeter_per_pixel))
+
+## What are minimum and maximum grain sizes detected?
+yolo_stats %>% 
+  mutate(minimum_size_mm = minimum_size_meter * 1000) %>% 
+  summarize(min(minimum_size_mm), 
+            max(maximum_size_meter * 1000))
+
+maximum_size_meter
+
+unique(yolo_stats$name)
+
+
+
+
+calc_stats <- function(var){
+  yolo_stats %>% 
+    summarize(min({{var}}), 
+              mean({{var}}), 
+              median({{var}}), 
+              max({{var}}))
+}
+
+calc_stats(l1_res_millimeter_per_pixel)
+
+yolo_stats %>% 
+  summarize(min(l1_res_millimeter_per_pixel), 
+            mean(l1l2_res_millimeter_per_pixel), 
+            median(l1l2_res_millimeter_per_pixel), 
+            max(l1l2_res_millimeter_per_pixel))
 
 
 

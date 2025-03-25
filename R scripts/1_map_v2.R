@@ -119,14 +119,28 @@ x_max <- bbox[[3]]
 y_max <- bbox[[4]]
 
 ## Make a layer for the state outline
+bc <- ne_states(country = "canada", returnclass = "sf") %>% 
+  filter(name == "British Columbia") %>% 
+  st_transform(crs = common_crs) %>% 
+  st_crop(., c(xmin = -124.73461, xmax = -117, ymin = 48, ymax = 49.5))
+
 wa <- ne_states(country = "united states of america", returnclass = "sf") %>% 
   filter(name == "Washington") %>% 
   st_transform(crs = common_crs)
 
 ## Make the WA map figure
 ggplot() + 
+  geom_sf(data = bc, fill = "gray80") + 
   geom_sf(data = wa, fill = "gray95") + 
   geom_sf(data = watershed, fill = background_color, color = "gray20") + 
+  annotate(geom = "text", x = -119, y = 49.2, label = "Canada") + 
+  annotate(geom = "text", x = -119, y = 48.8, label = "United States") + 
+  annotate(geom = "text", x = -120.5, y = 46.5, label = "YRB") + 
+  annotate(geom = "text", x = -124.5, y = 47, label = "Pacific Ocean", angle = '97') + 
   theme_map()
 ggsave("figures/1_wa_map_for_Figure1.png", width = 4, height = 3)
+
+
+
+
 

@@ -19,7 +19,7 @@ common_crs = 4236
 nexss_d50 <- read_csv("data/ignore/model_resp_annual_yrb_input_output_df_01_16_2023.csv") %>% 
   clean_names() 
 
-yolo_nexss <- read_csv("data/221115_rc2_master.csv") %>% 
+yolo_nexss <- read_csv("data/250314_rc2_master.csv") %>% 
   group_by(site_id) %>% 
   summarize(streamorde = first(stream_order), 
             d50_mm = mean(d50_mm_nexss)) %>% 

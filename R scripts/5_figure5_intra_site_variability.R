@@ -99,13 +99,13 @@ p1 <- ggplot(df_stats, aes(site)) +
   geom_point(data = df_stats %>% filter(site == "All"), 
              aes(y = mean), color = "red", size = 4) +
   #geom_text(aes(y = 10, label =  paste0("n=", n))) +
-  labs(x = "", y = "D50 (mm)")
+  labs(x = "Photographed sites", y = "D50 (mm)")
 
 p2 <- ggplot(df_stats, aes(site, sd / mean)) + 
   geom_col(fill = "coral", color = "black") + 
   geom_col(data = df_stats %>% filter(site == "All"), 
            fill = "red", color = "black") + 
-  labs(x = "", y = "SD / mean")
+  labs(x = "Photographed sites", y = "SD / mean")
 
 plot_grid(p1, p2, rel_heights = c(1, 0.5), ncol = 1, align = "hv", labels = c("A", "B"))
 ggsave("figures/5_intra_site_variability_revised.png", width = 6, height = 5)

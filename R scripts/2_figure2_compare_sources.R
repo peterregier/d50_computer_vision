@@ -62,12 +62,21 @@ df_long <- bind_rows(df_long_raw, usgs_raw)
 
 # 4. Create by-method boxplot (Panel A) ----------------------------------------
 
+my_comparisons = list(c("d50_mm", "d50_mm_abeshu"), 
+                      c("d50_mm", "d50_mm_nexss"), 
+                      c("d50_mm", "d50_mm_yolo"), 
+                      c("d50_mm_abeshu", "d50_mm_nexss"), 
+                      c("d50_mm_abeshu", "d50_mm_yolo"), 
+                      c("d50_mm_yolo", "d50_mm_nexss"))
+
 panel_a <- ggplot(df_long, aes(source, d50_mm)) + 
   geom_boxplot(aes(fill = source), alpha = 0.5, show.legend = F) + 
   scale_y_continuous(trans = "sqrt")  + 
   scale_fill_manual(values = method_color_scheme) +
   labs(x = "Estimate source", y = "D50 (mm)") + 
-  scale_x_discrete(labels = c("USGS", "Abeshu", "NEXSS", "YOLO"))
+  scale_x_discrete(labels = c("USGS", "Abeshu", "NEXSS", "YOLO")) + 
+  stat_compare_means(comparisons = my_comparisons, 
+                     label = "p.signif")
 
 ## For stats in paper: 
 compare_means(d50_mm ~ source, data = df_long)
@@ -98,7 +107,7 @@ panel_b <- ggplot() +
                  color = "black", alpha = 0.5, show.legend = F) + 
   scale_fill_manual(values = method_color_scheme) +
   facet_wrap(~source, ncol = 1, labeller = relabeller) +
-  labs(x = "log2 D50", y = "Count", fill = "")
+  labs(x = "log2 D50 (mm)", y = "Count of measurements", fill = "")
 ggsave("figures/230523_density_plots_revised.png", width = 3, height = 6)
 
 

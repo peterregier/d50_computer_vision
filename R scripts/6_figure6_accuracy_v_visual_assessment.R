@@ -37,11 +37,15 @@ df_raw <- read_csv("data/221115_rc2_master.csv") %>%
 ggplot(yolo_visual, aes(fct_reorder(folder, accuracy_threshold_percent), accuracy_threshold_percent)) + 
   geom_boxplot(outlier.color = NA) + 
   geom_jitter(alpha = 0.5, width = 0.1) + 
-  #geom_rect(xmin = 2.8, xmax = 3.2, ymin = 48, ymax = 53, fill = NA, color = "red") + 
-  labs(title = "Visual assessment", x = "Image suitability", y = "YOLO accuracy (%)")
-ggsave("figures/6_accuracy_v_visual_assessment_revised.png", width = 3, height = 3)
-ggsave("figures/6_accuracy_v_visual_assessment_revised.pdf", width = 3, height = 3)
-ggsave("figures/jpg/6_accuracy_v_visual_assessment_revised.jpg", width = 3, height = 3)
+  stat_compare_means(comparisons = list(c("no", "maybe"), 
+                                        c("no", "yes"), 
+                                        c("maybe", "yes")), 
+                     label = "p.signif") + 
+  labs(title = "Visual assessment of suitability of images for YOLO", 
+       x = "Image suitability category", y = "YOLO accuracy (%)")
+ggsave("figures/6_accuracy_v_visual_assessment_revised.png", width = 5, height = 5)
+ggsave("figures/6_accuracy_v_visual_assessment_revised.pdf", width = 5, height = 5)
+ggsave("figures/jpg/6_accuracy_v_visual_assessment_revised.jpg", width = 5, height = 5)
 
 ## For stats
 ggplot(yolo_visual, aes(fct_reorder(folder, accuracy_threshold_percent), accuracy_threshold_percent)) + 

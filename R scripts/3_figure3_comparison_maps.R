@@ -91,7 +91,7 @@ plot_grid(plot_map("d50_mm_a_usgs", "USGS"),
           plot_map("d50_mm_abeshu", "Abeshu"), 
           plot_map("d50_mm_nexss", "NEXSS"), 
                    plot_map("d50_mm_yolo", "YOLO"), 
-          nrow = 2, labels = c("A", "B", "C", "D"))
+          nrow = 2)
 ggsave("figures/3_figure3_maps_revised.png", width = 10, height = 10)
 ggsave("figures/3_figure3_maps_revised.pdf", width = 10, height = 10)
 ggsave("figures/jpg/3_figure3_maps_revised.jpg", width = 10, height = 10)

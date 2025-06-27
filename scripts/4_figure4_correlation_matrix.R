@@ -159,5 +159,5 @@ make_boxplot <- function(var){
 
 plot_grid(make_boxplot(cat_stream_slope) + ylab("Slope (%)"), 
           make_boxplot(cat_elev_mean) + ylab("Elevation (m)"), ncol = 1)
-ggsave("figures/S2_characteristics_by_streamorder_revised.png", width = 5, height = 4)
+ggsave("figures/7_S1_characteristics_by_streamorder_revised.png", width = 5, height = 4)
 

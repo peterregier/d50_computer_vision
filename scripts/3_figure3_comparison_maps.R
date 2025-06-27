@@ -130,7 +130,7 @@ plot_grid(ggplot(df_distance, aes(x = divide_d50, distance_m)) +
             stat_compare_means(label = "p.format", label.x = 1.3, label.y = -119.8) + 
             labs(x = "D50 value", y = "Longitude"), 
           ncol = 1)
-ggsave("figures/S3_boxplots_for_Fig3_revised.png", width = 8, height = 8)
+ggsave("figures/9_S3_boxplots_for_Fig3_revised.png", width = 8, height = 8)
 
 
 df_distance %>% 

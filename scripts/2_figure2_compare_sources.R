@@ -135,6 +135,6 @@ ggplot(df_long, aes(as.factor(stream_order), d50_mm)) +
   facet_wrap(~source, ncol = 1, labeller = relabeller) + 
   scale_fill_viridis_d() + 
   labs(x = "Strahler Stream Order", y = "D50 (mm)")
-ggsave("figures/SA_Figure_2C_revised.png", width = 3.5, height = 6)
+ggsave("figures/8_S2_Figure_2C_revised.png", width = 3.5, height = 6)
 
 

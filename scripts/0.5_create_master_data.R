@@ -33,7 +33,7 @@ stream_order_edited <- stream_order_raw %>%
   add_row(stream_order = 3, site_id = "U20")
 
 ## Second, import lat-longs from a file also provided by VGC (same chat)
-site_info_raw <- read_csv("data/RC2 Spatial Study_Responses_Form Responses 1_updated 2022-02-01.csv") %>% 
+site_info_raw <- read_csv("data/RC2_Spatial_Study_Responses_Form_Responses_1_updated 2022-02-01.csv") %>% 
   clean_names() %>% 
   rename("site_id" = id) %>% 
   select(site_id, long, lat) 

@@ -155,7 +155,7 @@ ggplot() +
 # 4. Spatial stats to ID sites that are close to RC sites ----------------------
 
 ## Load sites from VGC spreadsheet
-site_info <- read_csv("data/RC2_Spatial_Study_Responses_Form_Responses_1_updated 2022-02-01.csv") %>% 
+site_info <- read_csv("data/RC2_Spatial_Study_Responses_Form_Responses_1_updated_2022-02-01.csv") %>% 
   clean_names() %>% 
   select(id, lat, long) %>% 
   st_as_sf(coords = c("long", "lat"), crs = common_crs)

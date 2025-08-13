@@ -13,7 +13,7 @@ This data package was originally published in May 2023. It was updated August 20
 
 ## Manuscript Reference
 The manuscript associated with this repo and Data Package can be cited as follows:  
-> Regier P, Chen Y, Son K, Bao J, Forbes B, Goldman A, Kaufman M, Rod KA and Stegen J (2025) Different methods of estimating riverbed sediment grain size diverge at the basin scale. Front. Earth Sci. 13:1529503. doi: 10.3389/feart.2025.1529503 
+> Regier P, Chen Y, Son K, Bao J, Forbes B, Goldman A, Kaufman M, Rod KA and Stegen J (2025) Different methods of estimating riverbed sediment grain size diverge at the basin scale. Front. Earth Sci. 13:1529503. doi: [10.3389/feart.2025.1529503](https://doi.org/10.3389/feart.2025.1529503) 
 ## Data Reference
 In addition to this repo, the Data Package is published and publicly available on ESS-DIVE. If using these data, please cite the Data Package with the following citation and DOI:  
 > [data package citation will be added here once the data package is published]

@@ -1,0 +1,54 @@
+File_Name,File_Description,Standard,Header_Rows,Column_or_Row_Name_Position,File_Path
+readme_v2_Regier_2025_d50.pdf,Data package level readme. Contains data package summary; acknowledgements; and contact information.,N/A,-9999,-9999,/d50_computer_vision
+v2_Regier_2025_d50_flmd.csv,File-level metadata that lists and describes all of the files contained in the data package.,ESS-DIVE FLMD v1; ESS-DIVE CSV v1,1,1,/d50_computer_vision
+v2_Regier_2025_d50_dd.csv,"Data dictionary that defines column and row headers across all tabular data files (files ending in "".csv"" or "".tsv"") in the data package.",ESS-DIVE FLMD v1; ESS-DIVE CSV v1,1,1,/d50_computer_vision
+d50_computer_vision.Rproj,R project file use to improve organization and management of R files.,N/A,-9999,-9999,/d50_computer_vision
+221114_usgs_d50_matched.csv,This file contains information about United States Geological Survey (USGS) sampling site locations and d50 measurements.,ESS-DIVE CSV v1,1,1,/d50_computer_vision/data
+250314_rc2_master.csv,"This file contains estimates of d50 for sampling sites based on YOLO, NEXSS and Abeshu et al. (2022; doi:10.5194/essd-14-929-2022) modeling approaches.",ESS-DIVE CSV v1,1,1,/d50_computer_vision/data
+RC2_Spatial_Study_Responses_Form_Responses_1_updated_2022-02-01.csv,This file contains latitude and longitude information for each of the study sites.,ESS-DIVE CSV v1,1,1,/d50_computer_vision/data
+RC2_all_D50.csv,This file contains estimates of d50 for sampling sites based on NEXSS and Abeshu et al. (2022; doi:10.5194/essd-14-929-2022) modeling approaches.,ESS-DIVE CSV v1,1,1,/d50_computer_vision/data
+RC2_all_stream_Attributes_updated.csv,This file contains information about sampling sites.,ESS-DIVE CSV v1,1,1,/d50_computer_vision/data
+abeshu_fig1_digitized.csv,This file contains information about d50 values extracted from a digitized version of Figure 2 in  Abeshu et al. (2022; doi:10.5194/essd-14-929-2022).,ESS-DIVE CSV v1,1,1,/d50_computer_vision/data
+d50_Train1_Prediction1_40.csv,This file contains information about images used for YOLO d50 estimates; and YOLO model diagnostics.,ESS-DIVE CSV v1,1,1,/d50_computer_vision/data
+d50_TrainNone_ValidNone_TestNone_Predict3b_35.csv,This file contains outputs from the YOLO-enabled d50 estimation approach.,ESS-DIVE CSV v1,1,1,/d50_computer_vision/data
+dataHUC17_May29_2020.rds,This file contains information about sampling sites.,N/A,-9999,-9999,/d50_computer_vision/data
+nhd_yrb_D50_variable_updated.csv,This file contains information about site characteristics used for correlation analyses.,ESS-DIVE CSV v1,1,1,/d50_computer_vision/data
+WBDHU4.dbf,"HUC4 National Hydrography Dataset watershed boundary shapefile. The shape file consists of multiple file extensions. The file ending in "".shp"" stores the spatial geometry of the features. The file ending in "".shx"" indexes the geometry. The file ending in "".dbf"" contains the tabular attribute information. The file ending in "".prj"" defines the spatial reference system.",N/A,-9999,-9999,/d50_computer_vision/data/gis/NHD_H_17030001_HU8_Shape/Shape
+WBDHU4.prj,"HUC4 National Hydrography Dataset watershed boundary shapefile. The shape file consists of multiple file extensions. The file ending in "".shp"" stores the spatial geometry of the features. The file ending in "".shx"" indexes the geometry. The file ending in "".dbf"" contains the tabular attribute information. The file ending in "".prj"" defines the spatial reference system.",N/A,-9999,-9999,/d50_computer_vision/data/gis/NHD_H_17030001_HU8_Shape/Shape
+WBDHU4.shp,"HUC4 National Hydrography Dataset watershed boundary shapefile. The shape file consists of multiple file extensions. The file ending in "".shp"" stores the spatial geometry of the features. The file ending in "".shx"" indexes the geometry. The file ending in "".dbf"" contains the tabular attribute information. The file ending in "".prj"" defines the spatial reference system.",N/A,-9999,-9999,/d50_computer_vision/data/gis/NHD_H_17030001_HU8_Shape/Shape
+WBDHU4.shx,"HUC4 National Hydrography Dataset watershed boundary shapefile. The shape file consists of multiple file extensions. The file ending in "".shp"" stores the spatial geometry of the features. The file ending in "".shx"" indexes the geometry. The file ending in "".dbf"" contains the tabular attribute information. The file ending in "".prj"" defines the spatial reference system.",N/A,-9999,-9999,/d50_computer_vision/data/gis/NHD_H_17030001_HU8_Shape/Shape
+10_S6_yolo_vs_usgs_from_nexss.png,Supplemental figure S6.,N/A,-9999,-9999,/d50_computer_vision/figures
+1_Figure1_revised.jpg,Figure 1 showing a map of the study area.,N/A,-9999,-9999,/d50_computer_vision/figures
+1_Figure1_revised.pdf,Figure 1 showing a map of the study area.,N/A,-9999,-9999,/d50_computer_vision/figures
+1_Figure1_revised.png,Figure 1 showing a map of the study area.,N/A,-9999,-9999,/d50_computer_vision/figures
+1_wa_map_for_Figure1.png,Washington state map used for geographical context for Figure 1.,N/A,-9999,-9999,/d50_computer_vision/figures
+2_Figure2_revised.pdf,"Figure 2 showing d50 distributions between methods, relative to a standardized distribution, and by stream order.",N/A,-9999,-9999,/d50_computer_vision/figures
+2_figure2_revised.png,"Figure 2 showing d50 distributions between methods, relative to a standardized distribution, and by stream order.",N/A,-9999,-9999,/d50_computer_vision/figures
+3_figure3_maps_revised.pdf,Figure 3 showing distributions of d50 estimates by method across the study basin.,N/A,-9999,-9999,/d50_computer_vision/figures
+3_figure3_maps_revised.png,Figure 3 showing distributions of d50 estimates by method across the study basin.,N/A,-9999,-9999,/d50_computer_vision/figures
+4_Figure4_correlations_revised.pdf,Figure 4 showing correlations between d50 estimates and basin-scale/catchment-scale watershed characteristics.,N/A,-9999,-9999,/d50_computer_vision/figures
+4_Figure4_correlations_revised.png,Figure 4 showing correlations between d50 estimates and basin-scale/catchment-scale watershed characteristics.,N/A,-9999,-9999,/d50_computer_vision/figures
+5_intra_site_variability_revised.pdf,Figure 5 showing intra-site variability of d50 estimated by the YOLO-enabled method.,N/A,-9999,-9999,/d50_computer_vision/figures
+5_intra_site_variability_revised.png,Figure 5 showing intra-site variability of d50 estimated by the YOLO-enabled method.,N/A,-9999,-9999,/d50_computer_vision/figures
+6_accuracy_v_visual_assessment_revised.pdf,Figure 6 showing the differences in YOLO model accuracy based on visually assessment of suitability of images for YOLO.,N/A,-9999,-9999,/d50_computer_vision/figures
+6_accuracy_v_visual_assessment_revised.png,Figure 6 showing the differences in YOLO model accuracy based on visually assessment of suitability of images for YOLO.,N/A,-9999,-9999,/d50_computer_vision/figures
+7_S1_characteristics_by_streamorder_revised.png,Supplemental figure S1 showing the relationships between stream order and slope/elevation.,N/A,-9999,-9999,/d50_computer_vision/figures
+8_S2_Figure_2C_revised.png,Supplemental figure S2 showing the information in Figure 2C with a common y-axis.,N/A,-9999,-9999,/d50_computer_vision/figures
+9_S3_boxplots_for_Fig3_revised.png,"Supplemental figure S3 showing relationships of d50 categories to distance from main stem, latitude, and longitude by d50 estimation method.",N/A,-9999,-9999,/d50_computer_vision/figures
+Table1.pdf,Table 1 showing a comparison of the different methods used to estimate d50 presented in this study.,N/A,-9999,-9999,/d50_computer_vision/figures
+Table1.png,Table 1 showing a comparison of the different methods used to estimate d50 presented in this study.,N/A,-9999,-9999,/d50_computer_vision/figures
+Table2.png,Table 2 showing statistics for d50 datasets by method.,N/A,-9999,-9999,/d50_computer_vision/figures
+2_Figure2_revised.jpg,"Figure 2 showing d50 distributions between methods, relative to a standardized distribution, and by stream order.",N/A,-9999,-9999,/d50_computer_vision/figures/jpg
+3_figure3_maps_revised.jpg,Figure 3 showing distributions of d50 estimates by method across the study basin.,N/A,-9999,-9999,/d50_computer_vision/figures/jpg
+4_Figure4_correlations_revised.jpg,Figure 4 showing correlations between d50 estimates and basin-scale/catchment-scale watershed characteristics.,N/A,-9999,-9999,/d50_computer_vision/figures/jpg
+5_intra_site_variability_revised.jpg,Figure 5 showing intra-site variability of d50 estimated by the YOLO-enabled method.,N/A,-9999,-9999,/d50_computer_vision/figures/jpg
+6_accuracy_v_visual_assessment_revised.jpg,Figure 6 showing the differences in YOLO model accuracy based on visually assessment of suitability of images for YOLO.,N/A,-9999,-9999,/d50_computer_vision/figures/jpg
+0.5_create_master_data.R,R Script creating the master data file used in most analyses in this study.,N/A,-9999,-9999,/d50_computer_vision/scripts
+0_pull_usgs_d50.R,R Script used to pull data from USGS for grain sizes and estimate d50 from these datasets for the study basin.,N/A,-9999,-9999,/d50_computer_vision/scripts
+1_map_v2.R,R Script used to create Figure 1.,N/A,-9999,-9999,/d50_computer_vision/scripts
+2_figure2_compare_sources.R,R Script used to create Figure 2.,N/A,-9999,-9999,/d50_computer_vision/scripts
+3_figure3_comparison_maps.R,R Script used to create Figure 3.,N/A,-9999,-9999,/d50_computer_vision/scripts
+4_figure4_correlation_matrix.R,R Script used to create Figure 4.,N/A,-9999,-9999,/d50_computer_vision/scripts
+5_figure5_intra_site_variability.R,R Script used to create Figure 5.,N/A,-9999,-9999,/d50_computer_vision/scripts
+6_figure6_accuracy_v_visual_assessment.R,R Script used to create Figure 6.,N/A,-9999,-9999,/d50_computer_vision/scripts
+7_figureS6_compare_comids.R,R Script used to create Figure S6.,N/A,-9999,-9999,/d50_computer_vision/scripts

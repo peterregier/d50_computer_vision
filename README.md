@@ -1,5 +1,9 @@
 # d50_computer_vision
 
+**NOTE: This repository has been archived and is no longer maintained.
+The code is provided for historical reference and may contain unpatched or unknown vulnerabilities.
+It should not be used in production systems.**
+
 #### Data associated with “Different methods of estimating riverbed sediment grain size diverge at the basin scale ” (v2)
 Peter Regier, Yunxiang Chen, Kyongho Son, Jie Bao, Brieanne Forbes, Amy E. Goldman, Matthew H. Kaufman, Kenton A. Rod, and James C. Stegen
 ## Summary
